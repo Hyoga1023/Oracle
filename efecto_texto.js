@@ -12,13 +12,20 @@ function consultar() {
     const resultadoDiv = document.getElementById('resultado');
     resultadoDiv.innerHTML = '';
     
-    // Reproducir sonido
+    // Reproducir AMBOS sonidos simultáneamente
     try {
-        const sonido = new Audio('./sound/susurros.wav');
-        sonido.volume = 0.7;
-        sonido.play().catch(e => console.log('Error al reproducir el sonido:', e));
+        // Sonido de susurros
+        const susurro = new Audio('./sound/susurros.wav');
+        susurro.volume = 0.8; // Ajusta el volumen según necesidad
+        susurro.play().catch(e => console.log('Error al reproducir susurros:', e));
+        
+        // Sonido godpower
+        const poder = new Audio('./sound/godpower.wav');
+        poder.volume = 0.2; // Ajusta el volumen según necesidad
+        poder.play().catch(e => console.log('Error al reproducir godpower:', e));
+        
     } catch (error) {
-        console.log('Error con el audio:', error);
+        console.log('Error con los audios:', error);
     }
     
     // Efecto de letras tipo agua fluido
