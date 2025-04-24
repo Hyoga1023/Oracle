@@ -15,77 +15,78 @@ function consultar() {
     // Reproducir sonido
     try {
         const sonido = new Audio('./sound/susurros.wav');
-        sonido.volume = 0.7; // Ajustar volumen (opcional)
+        sonido.volume = 0.7;
         sonido.play().catch(e => console.log('Error al reproducir el sonido:', e));
     } catch (error) {
         console.log('Error con el audio:', error);
     }
     
-    // Efecto de letras tipo agua
-    mostrarRespuestaAcuosa(respuesta.prediction, resultadoDiv);
+    // Efecto de letras tipo agua fluido
+    mostrarRespuestaAcuosaFluida(respuesta.prediction, resultadoDiv);
 }
 
-function mostrarRespuestaAcuosa(texto, contenedor) {
+function mostrarRespuestaAcuosaFluida(texto, contenedor) {
     // Añadir un contenedor para el texto
     const textoContainer = document.createElement('div');
     textoContainer.classList.add('agua-text');
     contenedor.appendChild(textoContainer);
     
-    // Añadir el fondo de agua
-    const aguaFondo = document.createElement('div');
-    aguaFondo.classList.add('agua-fondo');
-    contenedor.appendChild(aguaFondo);
+    // Añadir el texto completo al contenedor
+    const parrafo = document.createElement('div');
+    parrafo.classList.add('parrafo-agua');
+    textoContainer.appendChild(parrafo);
     
     // Dividir el texto en palabras
     const palabras = texto.split(' ');
     
-    // Mostrar cada palabra completa
-    let i = 0;
-    
-    // Crear un div para el contenedor flexible
-    let flexContainer = document.createElement('div');
-    flexContainer.classList.add('flex-container');
-    textoContainer.appendChild(flexContainer);
-    
-    const mostrarSiguientePalabra = () => {
-        if (i < palabras.length) {
-            const palabra = palabras[i];
+    // Añadir todas las palabras al contenedor inmediatamente
+    palabras.forEach((palabra, index) => {
+        const palabraContainer = document.createElement('span');
+        palabraContainer.classList.add('palabra-agua');
+        
+        // Añadir cada letra de la palabra
+        for (let j = 0; j < palabra.length; j++) {
+            const span = document.createElement('span');
+            span.textContent = palabra[j];
+            span.classList.add('letra-agua');
             
-            // Crear un contenedor para la palabra completa
-            const palabraContainer = document.createElement('span');
-            palabraContainer.classList.add('palabra-agua');
+            // Calcular un retraso basado en la posición general en el texto
+            const globalIndex = calcularIndiceGlobal(palabras, index, j);
+            const delay = globalIndex * 30; // Retraso más corto para mayor fluidez
             
-            // Añadir cada letra de la palabra con efecto
-            for (let j = 0; j < palabra.length; j++) {
-                const span = document.createElement('span');
-                span.textContent = palabra[j];
-                span.classList.add('letra-agua');
-                
-                // Añadir un retraso ligeramente aleatorio para efecto más orgánico
-                const delay = j * 80 + Math.random() * 100;
-                span.style.animationDelay = `${delay}ms`;
-                
-                palabraContainer.appendChild(span);
-            }
-            
-            // Añadir la palabra completa al contenedor
-            flexContainer.appendChild(palabraContainer);
-            
-            // Avanzar a la siguiente palabra
-            i++;
-            
-            // Programar la siguiente palabra con un tiempo basado en la longitud
-            setTimeout(mostrarSiguientePalabra, palabra.length * 60 + 100);
+            span.style.animationDelay = `${delay}ms`;
+            palabraContainer.appendChild(span);
         }
-    };
+        
+        parrafo.appendChild(palabraContainer);
+        
+        // Añadir espacio después de cada palabra excepto la última
+        if (index < palabras.length - 1) {
+            const espacio = document.createElement('span');
+            espacio.innerHTML = '&nbsp;';
+            parrafo.appendChild(espacio);
+        }
+    });
+}
+
+// Función para calcular un índice global para cada letra en el texto completo
+function calcularIndiceGlobal(palabras, indicePalabra, indiceLetra) {
+    let indiceGlobal = 0;
     
-    // Comenzar el proceso
-    mostrarSiguientePalabra();
+    // Sumar la longitud de las palabras anteriores más los espacios
+    for (let i = 0; i < indicePalabra; i++) {
+        indiceGlobal += palabras[i].length + 1; // +1 por el espacio
+    }
+    
+    // Añadir el índice dentro de la palabra actual
+    indiceGlobal += indiceLetra;
+    
+    return indiceGlobal;
 }
 
 // Añadir estilos CSS directamente desde JavaScript
-const estilosAgua = document.createElement('style');
-estilosAgua.textContent = `
+const estilosAguaFluido = document.createElement('style');
+estilosAguaFluido.textContent = `
     .respuesta {
         background-color: var(--secundario-color);
         position: relative;
@@ -108,27 +109,15 @@ estilosAgua.textContent = `
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        padding: 20px;
     }
     
-    .agua-fondo {
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(ellipse at center, rgba(29, 45, 60, 0.5) 0%, rgba(29, 45, 60, 0.8) 100%);
-        background-size: cover;
-        opacity: 0.4;
-        z-index: 1;
-        animation: mover-agua 15s infinite linear;
-        pointer-events: none;
-    }
-    
-    .flex-container {
+    .parrafo-agua {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px;
+        align-items: center;
+        gap: 4px;
     }
     
     .palabra-agua {
@@ -140,78 +129,52 @@ estilosAgua.textContent = `
     .letra-agua {
         display: inline-block;
         opacity: 0;
-        transform: translateY(20px) translateZ(0);
+        transform: translateY(15px);
         color: #E1C78F;
         text-shadow: 0 0 10px rgba(225, 199, 143, 0.7);
-        animation: emerger-agua 1.5s forwards;
+        animation: emerger-agua-fluido 1.2s forwards ease-out;
+        will-change: transform, opacity;
     }
     
-    @keyframes emerger-agua {
+    @keyframes emerger-agua-fluido {
         0% {
             opacity: 0;
-            transform: translateY(20px) scaleY(0.8) translateZ(0);
-            filter: blur(10px);
-        }
-        30% {
-            opacity: 0.3;
-            transform: translateY(15px) scaleY(1.2) translateZ(0);
-            filter: blur(5px);
-        }
-        60% {
-            opacity: 0.7;
-            transform: translateY(5px) scaleY(0.9) translateZ(0);
-            filter: blur(2px);
-        }
-        80% {
-            opacity: 0.9;
-            transform: translateY(2px) scaleY(1.05) translateZ(0);
-            filter: blur(1px);
+            transform: translateY(15px) scaleY(0.9);
+            filter: blur(6px);
         }
         100% {
             opacity: 1;
-            transform: translateY(0) scaleY(1) translateZ(0);
+            transform: translateY(0) scaleY(1);
             filter: blur(0);
         }
     }
     
-    @keyframes mover-agua {
-        0% {
-            transform: rotate(0deg) scale(1);
-        }
-        50% {
-            transform: rotate(180deg) scale(1.2);
-        }
-        100% {
-            transform: rotate(360deg) scale(1);
-        }
-    }
-    
-    /* Añadir un efecto de ondulación al contenedor */
+    /* Sutil brillo dorado en el contenedor */
     .respuesta::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: 
-            radial-gradient(ellipse at center, 
-                rgba(161, 123, 92, 0.1) 0%, 
-                rgba(63, 79, 68, 0) 70%);
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(ellipse at center, 
+            rgba(225, 199, 143, 0.1) 0%, 
+            rgba(63, 79, 68, 0) 70%);
         pointer-events: none;
-        animation: ondular 8s infinite ease-in-out;
+        animation: sutil-brillo 8s infinite ease-in-out;
         z-index: 1;
+        opacity: 0.3;
     }
     
-    @keyframes ondular {
+    @keyframes sutil-brillo {
         0%, 100% {
-            transform: scale(1);
-            opacity: 0.3;
+            transform: scale(1) rotate(0deg);
+            opacity: 0.2;
         }
         50% {
-            transform: scale(1.2);
-            opacity: 0.5;
+            transform: scale(1.1) rotate(5deg);
+            opacity: 0.4;
         }
     }
 `;
-document.head.appendChild(estilosAgua);
+document.head.appendChild(estilosAguaFluido);
