@@ -198,7 +198,7 @@ const categories = {
       "Los dados del destino ya están lanzados, pero tu mano puede modificar su caída.",
       "El laberinto de opciones solo confunde a quien ha olvidado su verdadero norte.",
       "Detrás de cada puerta cerrada hay un universo paralelo de lo que pudo ser.",
-      "La decisión más importante no es qué elegir, sino cómo habitar la elección realizada.",
+      "La decisión más importante no es qué elegir, sino cómo impacta tu futuro la elección realizada.",
       "Las consecuencias de tus elecciones dibujan mapas estelares en el firmamento de tu destino."
     ],
     ambigua: [ 
@@ -235,7 +235,7 @@ const categories = {
     
     trabajo: ['trabajo', 'empleo', 'profesión', 'carrera', 'laboral', 'jefe', 'ascenso', 'empresa', 'oficina', 'proyecto', 'ocupación', 'puesto', 'sueldo', 'profesional', 'curriculum', 'entrevista', 'compañeros', 'despido', 'contrato', 'habilidades', 'experiencia', 'trabajaré', 'ascenderé', 'contrataré'],
     
-    futuro: ['dejará', 'preparar', 'anticipar', 'planear', 'proyectar', 'intentaré', 'correré', 'volaré', 'lograré', 'futuro', 'destino', 'porvenir', 'mañana', 'camino', 'rumbo', 'suerte', 'vida', 'plan', 'adelante', 'próximo', 'después', 'predecir', 'adivinar', 'años', 'tiempo', 'pronóstico', 'vaticinio', 'presagio', 'profecía', 'augurio', 'veré', 'alcanzaré', 'conseguiré'],
+    futuro: ['podría','dejará', 'preparar', 'anticipar', 'planear', 'proyectar', 'intentaré', 'correré', 'volaré', 'lograré', 'futuro', 'destino', 'porvenir', 'mañana', 'camino', 'rumbo', 'suerte', 'vida', 'plan', 'adelante', 'próximo', 'después', 'predecir', 'adivinar', 'años', 'tiempo', 'pronóstico', 'vaticinio', 'presagio', 'profecía', 'augurio', 'veré', 'alcanzaré', 'conseguiré', 'conseguirá', 'sabré', 'saberé', 'conoceré', 'descubriré', 'encontraré', 'veré'],
     
     muerte: ['tumbas','muertos','muerto','destruira', 'destruir', 'nostradamus', 'acabará', 'mundo', 'muerte', 'morir', 'fallecimiento', 'funeral', 'más allá', 'fin', 'descanso eterno', 'tumba','tumbas', 'luto', 'pérdida', 'duelo', 'trascender', 'final', 'despedida', 'cementerio', 'alma', 'espíritu', 'vida eterna', 'fantasma', 'reencarnación', 'cometa', 'asteroide', 'meteoro', 'apocalipsis', 'cataclismo', 'impacto', 'colisión', 'extinción', 'desastre', 'catástrofe', 'calamidad', 'devastación', 'aniquilación', 'desolación', 'ruinas', 'cenizas', 'entierro', 'terminaré'],
     
@@ -243,7 +243,7 @@ const categories = {
     
     familia: ['familia', 'hijo', 'hija', 'padre', 'madre', 'hermano', 'hermana', 'pariente', 'hogar', 'casa', 'adopción', 'embarazo', 'padres', 'abuelos', 'nietos', 'herencia familiar', 'apellido', 'tradición', 'linaje', 'descendencia', 'familiar', 'consanguíneo', 'parentesco', 'cuidaré', 'amaré', 'protegeré'],
     
-    decisiones: ['ganara','decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'escoger', 'elegir', 'indecisión', 'consecuencia', 'encrucijada', 'resolver', 'determinar', 'preferir', 'seleccionar', 'incertidumbre', 'crisis', 'decisión', 'definir', 'deliberar', 'evaluar', 'considerar', 'valorar', 'elegiré', 'decidiré', 'resolveré'],
+    decisiones: ['acompañare','conocere','ganara','decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'escoger', 'elegir', 'indecisión', 'consecuencia', 'encrucijada', 'resolver', 'determinar', 'preferir', 'seleccionar', 'incertidumbre', 'crisis', 'decisión', 'definir', 'deliberar', 'evaluar', 'considerar', 'valorar', 'elegiré', 'decidiré', 'resolveré', 'deberia'],
     
     educacion: ['titulo','estudiar','estudio', 'universidad', 'semestre', 'carrera', 'escuela', 'aprender', 'título', 'examen', 'aprobar', 'maestro', 'alumno', 'conocimiento', 'sabiduría', 'curso', 'materia', 'academia', 'graduación', 'tesis', 'máster', 'doctorado', 'beca', 'libro', 'lección', 'enseñanza', 'aprendizaje', 'educación', 'estudiar', 'aprenderé', 'aprobaré', 'graduaré'],
     
