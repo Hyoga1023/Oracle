@@ -2,6 +2,8 @@
 
 const categories = { 
     amor: [ 
+      "Ten cuidado con lo que deseas, a veces se optiene lo que se quiere.",  
+      "El amor es un laberinto donde cada giro trae sorpresas.",
       "El corazón danza al compás de un destino incierto.", 
       "Una unión florece bajo la luna menguante.", 
       "El lazo de los sentimientos puede tensarse o soltarse.", 
@@ -9,7 +11,7 @@ const categories = {
       "Dos almas entrelazadas crean patrones que ni los astros pueden descifrar.",
       "La llama del afecto se aviva con el soplo de la sinceridad.",
       "El jardín del amor requiere paciencia antes de revelar sus más bellas flores.",
-      "Como las mareas, los sentimientos fluyen y reflujen en ciclos impredecibles."
+      "Como las mareas, los sentimientos fluyen en ciclos impredecibles."
     ], 
     salud: [ 
       "El cuerpo es templo y guerrero en su propia batalla.", 
@@ -22,6 +24,7 @@ const categories = {
       "El árbol de la vida se nutre de raíces invisibles pero poderosas."
     ], 
     dinero: [ 
+      "Ten cuidado con lo que deseas, a veces se optiene lo que se quiere.",
       "El oro brilla, pero su fulgor puede cegar.", 
       "La fortuna llega como la marea: impredecible y cambiante.", 
       "El esfuerzo sembrado hoy dará frutos inciertos mañana.", 
@@ -50,6 +53,7 @@ const categories = {
       "El trabajo es un lienzo donde pintas con colores que solo tú puedes mezclar."
     ],
     futuro: [ 
+      "Ten cuidado con lo que deseas, a veces se optiene lo que se quiere.",  
       "Los astros murmuran secretos que aún no se desvelan.", 
       "Caminos bifurcados esperan pasos decididos o dubitativos.", 
       "Lo que está por venir se oculta tras el velo del tiempo.", 
@@ -167,6 +171,7 @@ const categories = {
     ],
     
     sueños: [
+        "Ten cuidado con lo que sueñas, a veces se optiene lo que se quiere.",
         "Los sueños son mapas que guían nuestra alma hacia lo desconocido.",
         "El éxito no está en lo que alcanzas, sino en la valentía de perseguir tus sueños.",
         "Los sueños se tejen con hilos de esperanza y acciones decididas.",
@@ -246,7 +251,7 @@ const categories = {
     
     espiritualidad: ['espiritualidad', 'alma', 'fe', 'dios', 'religión', 'meditación', 'yoga', 'oración', 'trascendencia', 'karma', 'iluminación', 'nirvana', 'paz interior', 'guía espiritual', 'mantra', 'energía', 'universo', 'cosmos', 'espíritu'],
     
-    tecnología: ['tecnología', 'innovación', 'inteligencia artificial', 'internet', 'computadora', 'móvil', 'software', 'hardware', 'aplicaciones', 'redes sociales', 'ciberseguridad', 'digital', 'datos', 'sistema', 'programación', 'gadgets', 'futuro tecnológico', 'realidad virtual', 'avances'],
+    tecnología: ['IA','tecnología', 'innovación', 'inteligencia artificial', 'internet', 'computadora', 'móvil', 'software', 'hardware', 'aplicaciones', 'redes sociales', 'ciberseguridad', 'digital', 'datos', 'sistema', 'programación', 'gadgets', 'futuro tecnológico', 'realidad virtual', 'avances'],
     
     arte_creatividad: ['arte', 'creatividad', 'pintura', 'música', 'danza', 'literatura', 'escultura', 'dibujo', 'cine', 'fotografía', 'poema', 'inspiración', 'expresión', 'diseño', 'estética', 'imaginación', 'galería', 'artesano', 'talento', 'cultura'],
     
