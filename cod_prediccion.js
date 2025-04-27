@@ -333,7 +333,7 @@ function normalizeText(text) {
 // ====================== CORE DEL PREDICTOR ======================
 // Definiciones globales que deben estar disponibles para todas las funciones
 const dominantKeywords = {
-    viajes: ['corren','vuelan','viaje', 'mudanza', 'país', 'extranjero', 'aventura', 'destino', 'turismo', 'vacaciones', 'explorar', 'camino', 'recorrido', 'mapa', 'traslado', 'visitar', 'lejos', 'cerca', 'frontera', 'pasaporte', 'maleta', 'hotel', 'vuelo', 'avión', 'tren', 'viajar', 'conocer', 'descubrir', 'viajaré', 'exploraré', 'conoceré'],
+    viajes: ['viajara','corren','vuelan','viaje', 'mudanza', 'país', 'extranjero', 'aventura', 'destino', 'turismo', 'vacaciones', 'explorar', 'camino', 'recorrido', 'mapa', 'traslado', 'visitar', 'lejos', 'cerca', 'frontera', 'pasaporte', 'maleta', 'hotel', 'vuelo', 'avión', 'tren', 'viajar', 'conocer', 'descubrir', 'viajaré', 'exploraré', 'conoceré'],
     trabajo: ['trabajo', 'empleo', 'contrato', 'entrevista', 'sueldo', 'ascenso', 'profesión', 'curriculum', 'despido'],
     salud: ['salud', 'enfermedad', 'médico', 'hospital', 'tratamiento', 'dolor', 'síntoma', 'recuperación'],
     dinero: ['dinero', 'riqueza', 'pagar', 'deuda', 'préstamo', 'inversión', 'lotería', 'ganar', 'ahorro'],
