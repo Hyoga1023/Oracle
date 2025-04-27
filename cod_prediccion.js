@@ -2,108 +2,108 @@
 
 const categories = { 
     amor: [ 
-      "Ten cuidado con lo que deseas, a veces se optiene lo que se quiere.",  
-      "El amor es un laberinto donde cada giro trae sorpresas.",
-      "El corazón danza al compás de un destino incierto.", 
-      "Una unión florece bajo la luna menguante.", 
-      "El lazo de los sentimientos puede tensarse o soltarse.", 
-      "Un susurro nocturno trae promesas de pasión o desvelo.",
-      "Dos almas entrelazadas crean patrones que ni los astros pueden descifrar.",
-      "La llama del afecto se aviva con el soplo de la sinceridad.",
-      "El jardín del amor requiere paciencia antes de revelar sus más bellas flores.",
-      "Como las mareas, los sentimientos fluyen en ciclos impredecibles."
+        "Ten cuidado con lo que deseas, a veces se obtiene lo que se quiere.",  
+        "El amor es un laberinto donde cada giro trae sorpresas.",
+        "El corazón danza al compás de un destino incierto.", 
+        "Una unión florece bajo la luna menguante.", 
+        "El lazo de los sentimientos puede tensarse o soltarse.", 
+        "Un susurro nocturno trae promesas de pasión o desvelo.",
+        "Dos almas entrelazadas crean patrones que ni los astros pueden descifrar.",
+        "La llama del afecto se aviva con el soplo de la sinceridad.",
+        "El jardín del amor requiere paciencia antes de revelar sus más bellas flores.",
+        "Como las mareas, los sentimientos fluyen en ciclos impredecibles."
     ], 
     salud: [ 
-      "El cuerpo es templo y guerrero en su propia batalla.", 
-      "La vitalidad fluye como el río; calma o tempestad acechan.", 
-      "El espíritu vigoroso supera dolencias pasajeras.", 
-      "Una brisa renovadora puede traer fortaleza o debilidad.",
-      "El equilibrio del ser es frágil como cristal, pero resistente como el diamante.",
-      "La sanación se esconde en los rincones menos explorados del alma.",
-      "Las células guardan memoria de bienestar que buscan recuperar constantemente.",
-      "El árbol de la vida se nutre de raíces invisibles pero poderosas."
+        "El cuerpo es templo y guerrero en su propia batalla.", 
+        "La vitalidad fluye como el río; calma o tempestad acechan.", 
+        "El espíritu vigoroso supera dolencias pasajeras.", 
+        "Una brisa renovadora puede traer fortaleza o debilidad.",
+        "El equilibrio del ser es frágil como cristal, pero resistente como el diamante.",
+        "La sanación se esconde en los rincones menos explorados del alma.",
+        "Las células guardan memoria de bienestar que buscan recuperar constantemente.",
+        "El árbol de la vida se nutre de raíces invisibles pero poderosas."
     ], 
     dinero: [ 
-      "Ten cuidado con lo que deseas, a veces se optiene lo que se quiere.",
-      "El oro brilla, pero su fulgor puede cegar.", 
-      "La fortuna llega como la marea: impredecible y cambiante.", 
-      "El esfuerzo sembrado hoy dará frutos inciertos mañana.", 
-      "Riquezas o austeridad, ambas son caras de la misma moneda.",
-      "Las monedas danzan entre los dedos de quien sabe contar sus pasos.",
-      "La prosperidad material es el reflejo de un río más profundo y caudaloso.",
-      "La abundancia busca a quien no la persigue con desesperación.",
-      "Las semillas de la riqueza florecen en terrenos inesperados."
+        "Ten cuidado con lo que deseas, a veces se obtiene lo que se quiere.",
+        "El oro brilla, pero su fulgor puede cegar.", 
+        "La fortuna llega como la marea: impredecible y cambiante.", 
+        "El esfuerzo sembrado hoy dará frutos inciertos mañana.", 
+        "Riquezas o austeridad, ambas son caras de la misma moneda.",
+        "Las monedas danzan entre los dedos de quien sabe contar sus pasos.",
+        "La prosperidad material es el reflejo de un río más profundo y caudaloso.",
+        "La abundancia busca a quien no la persigue con desesperación.",
+        "Las semillas de la riqueza florecen en terrenos inesperados."
     ], 
     clima:[
-      "Las nubes se disipan, pero el sol aún no se asoma.",
-      "El viento susurra secretos de cambios inminentes.",
-      "La lluvia puede ser bendición o tormenta, según el corazón que la reciba.",
-      "a veces quieres ver el sol, pero la lluvia es necesaria.",
-      "puede ser que el clima sea el que quieres, ten cuidado con lo que deseas."
+        "Las nubes se disipan, pero el sol aún no se asoma.",
+        "El viento susurra secretos de cambios inminentes.",
+        "La lluvia puede ser bendición o tormenta, según el corazón que la reciba.",
+        "A veces quieres ver el sol, pero la lluvia es necesaria.",
+        "Puede ser que el clima sea el que quieres, ten cuidado con lo que deseas."
     ],
     trabajo: [
-      "Quien siembra sin rendirse cosecha frutos jugosos.",
-      "El camino profesional se ilumina con la antorcha de la perseverancia.",
-      "Nuevos horizontes laborales se asoman tras la niebla de la incertidumbre.",
-      "Las semillas del esfuerzo germinarán en terrenos inesperados.",
-      "La rueda del oficio gira con ritmos que solo el tiempo desvela.",
-      "El reconocimiento busca a quien no lo persigue con afán desmedido.",
-      "Tus talentos ocultos serán descubiertos por ojos que sabrán valorarlos.",
-      "La disciplina silenciosa construye torres que ninguna tormenta derrumba.",
-      "El trabajo es un lienzo donde pintas con colores que solo tú puedes mezclar."
+        "Quien siembra sin rendirse cosecha frutos jugosos.",
+        "El camino profesional se ilumina con la antorcha de la perseverancia.",
+        "Nuevos horizontes laborales se asoman tras la niebla de la incertidumbre.",
+        "Las semillas del esfuerzo germinarán en terrenos inesperados.",
+        "La rueda del oficio gira con ritmos que solo el tiempo desvela.",
+        "El reconocimiento busca a quien no lo persigue con afán desmedido.",
+        "Tus talentos ocultos serán descubiertos por ojos que sabrán valorarlos.",
+        "La disciplina silenciosa construye torres que ninguna tormenta derrumba.",
+        "El trabajo es un lienzo donde pintas con colores que solo tú puedes mezclar."
     ],
     futuro: [ 
-      "Ten cuidado con lo que deseas, a veces se optiene lo que se quiere.",  
-      "Los astros murmuran secretos que aún no se desvelan.", 
-      "Caminos bifurcados esperan pasos decididos o dubitativos.", 
-      "Lo que está por venir se oculta tras el velo del tiempo.", 
-      "Las sombras del porvenir pueden traer claridad o penumbra.",
-      "El mañana es un tapiz que se teje con los hilos invisibles del presente.",
-      "Cada paso hacia el horizonte revela nuevos paisajes, oculta otros.",
-      "El destino no es un camino trazado sino un bosque de senderos infinitos.",
-      "Lo que sueñas hoy se convertirá en semilla del mañana."
+        "Ten cuidado con lo que deseas, a veces se obtiene lo que se quiere.",  
+        "Los astros murmuran secretos que aún no se desvelan.", 
+        "Caminos bifurcados esperan pasos decididos o dubitativos.", 
+        "Lo que está por venir se oculta tras el velo del tiempo.", 
+        "Las sombras del porvenir pueden traer claridad o penumbra.",
+        "El mañana es un tapiz que se teje con los hilos invisibles del presente.",
+        "Cada paso hacia el horizonte revela nuevos paisajes, oculta otros.",
+        "El destino no es un camino trazado sino un bosque de senderos infinitos.",
+        "Lo que sueñas hoy se convertirá en semilla del mañana."
     ], 
     muerte: [ 
-      "La última puerta aguarda, pero su llave es un misterio.", 
-      "Los ecos del más allá cantan melodías incomprensibles.", 
-      "El final es un comienzo velado por sombras.", 
-      "La transición eterna no distingue entre días o noches.",
-      "El ciclo de la existencia continúa más allá de lo que los ojos mortales perciben.",
-      "Lo que termina aquí, florece en dimensiones que no podemos comprender.",
-      "La barca que cruza el río final navega bajo estrellas desconocidas.",
-      "Las huellas de tu existencia permanecen cuando el cuerpo ya se ha ido."
+        "La última puerta aguarda, pero su llave es un misterio.", 
+        "Los ecos del más allá cantan melodías incomprensibles.", 
+        "El final es un comienzo velado por sombras.", 
+        "La transición eterna no distingue entre días o noches.",
+        "El ciclo de la existencia continúa más allá de lo que los ojos mortales perciben.",
+        "Lo que termina aquí, florece en dimensiones que no podemos comprender.",
+        "La barca que cruza el río final navega bajo estrellas desconocidas.",
+        "Las huellas de tu existencia permanecen cuando el cuerpo ya se ha ido."
     ], 
     viajes: [
-      "Podrias elegir viajar o podrias elegir quedarte, el medio en el que lo hagas no importa.",
-      "Los caminos se bifurcan en mil posibilidades, pero solo uno guarda tus pasos.",
-      "Horizontes lejanos te llaman con voces solo audibles para el corazón inquieto.",
-      "El explorador que vive en ti anhela tierras donde tu sombra nunca se ha proyectado.",
-      "La brújula del destino señala hacia lugares que tus ojos aún no conocen.",
-      "Un viaje físico es, a menudo, reflejo de un peregrinaje interior más profundo.",
-      "Atravesar fronteras visibles te llevará a cruzar límites invisibles en tu interior.",
-      "El equipaje más ligero es el que permite al alma volar más alto durante la travesía.",
-      "Las estrellas que te guían brillan con intensidad variable según el camino elegido.",
-      "Podría llegar a darse ese viaje sin embargo... hay que tener cuidado con lo que se desea."
+        "Podrías elegir viajar o podrías elegir quedarte, el medio en el que lo hagas no importa.",
+        "Los caminos se bifurcan en mil posibilidades, pero solo uno guarda tus pasos.",
+        "Horizontes lejanos te llaman con voces solo audibles para el corazón inquieto.",
+        "El explorador que vive en ti anhela tierras donde tu sombra nunca se ha proyectado.",
+        "La brújula del destino señala hacia lugares que tus ojos aún no conocen.",
+        "Un viaje físico es, a menudo, reflejo de un peregrinaje interior más profundo.",
+        "Atravesar fronteras visibles te llevará a cruzar límites invisibles en tu interior.",
+        "El equipaje más ligero es el que permite al alma volar más alto durante la travesía.",
+        "Las estrellas que te guían brillan con intensidad variable según el camino elegido.",
+        "Podría llegar a darse ese viaje sin embargo... hay que tener cuidado con lo que se desea."
     ],
     familia: [
-      "Las raíces familiares se extienden más allá de lo que la memoria alcanza.",
-      "El árbol genealógico florece con secretos que solo el tiempo revela.",
-      "Los lazos de sangre son ríos que fluyen por cauces impredecibles.",
-      "El hogar es un refugio cuyas puertas se abren hacia adentro y hacia afuera.",
-      "La herencia más valiosa no se encuentra en testamentos ni documentos legales.",
-      "Las generaciones se entrelazan como hilos de un tapiz ancestral.",
-      "El nido familiar puede estrecharse o expandirse según los vientos del destino.",
-      "Las voces de los ancestros susurran consejos en el silencio de la introspección."
+        "Las raíces familiares se extienden más allá de lo que la memoria alcanza.",
+        "El árbol genealógico florece con secretos que solo el tiempo revela.",
+        "Los lazos de sangre son ríos que fluyen por cauces impredecibles.",
+        "El hogar es un refugio cuyas puertas se abren hacia adentro y hacia afuera.",
+        "La herencia más valiosa no se encuentra en testamentos ni documentos legales.",
+        "Las generaciones se entrelazan como hilos de un tapiz ancestral.",
+        "El nido familiar puede estrecharse o expandirse según los vientos del destino.",
+        "Las voces de los ancestros susurran consejos en el silencio de la introspección."
     ],
     educacion: [
-      "El conocimiento es un océano cuya profundidad solo descubren los navegantes persistentes.",
-      "Los libros son puertas, pero las llaves están forjadas con la aleación de tu curiosidad.",
-      "La mente que se expande nunca regresa a sus dimensiones originales.",
-      "Las semillas del aprendizaje germinan en tiempos que el maestro no siempre presencia.",
-      "La sabiduría verdadera reconoce la diferencia entre información y transformación.",
-      "El pergamino más valioso está escrito con la tinta invisible de la experiencia.",
-      "Cada lección aprendida es un faro que ilumina territorios aún inexplorados.",
-      "El estudioso paciente descubre que algunas preguntas son más valiosas que sus respuestas."
+        "El conocimiento es un océano cuya profundidad solo descubren los navegantes persistentes.",
+        "Los libros son puertas, pero las llaves están forjadas con la aleación de tu curiosidad.",
+        "La mente que se expande nunca regresa a sus dimensiones originales.",
+        "Las semillas del aprendizaje germinan en tiempos que el maestro no siempre presencia.",
+        "La sabiduría verdadera reconoce la diferencia entre información y transformación.",
+        "El pergamino más valioso está escrito con la tinta invisible de la experiencia.",
+        "Cada lección aprendida es un faro que ilumina territorios aún inexplorados.",
+        "El estudioso paciente descubre que algunas preguntas son más valiosas que sus respuestas."
     ],
     amistad: [
         "La amistad verdadera es un refugio donde el alma se siente en casa.",
@@ -154,69 +154,10 @@ const categories = {
         "El verdadero deporte no es solo competencia, es superación constante.",
         "En el deporte, la mente es tan importante como el cuerpo, ya que ambos deben estar en sincronía.",
         "La victoria no siempre se mide en trofeos, sino en el esfuerzo invertido.",
-        "El equipo es una unidad que se construye sobre la confianza y el esfuerzo conjunto.",
-        "El deporte enseña que la caída no es el final, sino el impulso para levantarse más fuerte.",
-        "En cada partido, el verdadero desafío es vencer tus propios miedos y dudas."
-    ],
-    
-    naturaleza: [
-        "La naturaleza no es un lugar al que vamos, es nuestra casa.",
-        "Los árboles cuentan historias que el viento susurra solo a aquellos que escuchan.",
-        "La biodiversidad es el alma del planeta, cada especie es una nota en su melodía.",
-        "El sol no solo ilumina, también inspira a quienes lo buscan.",
-        "La tierra respira con nosotros, y si la escuchamos, nos hablará de su historia.",
-        "La naturaleza es el reflejo perfecto de lo que somos: siempre en equilibrio entre caos y orden.",
-        "Cada amanecer es una nueva oportunidad para abrazar la belleza que la naturaleza nos ofrece.",
-        "La calma del bosque enseña que el silencio tiene mucho que decir."
-    ],
-    
-    sueños: [
-        "Ten cuidado con lo que sueñas, a veces se optiene lo que se quiere.",
-        "Los sueños son mapas que guían nuestra alma hacia lo desconocido.",
-        "El éxito no está en lo que alcanzas, sino en la valentía de perseguir tus sueños.",
-        "Los sueños se tejen con hilos de esperanza y acciones decididas.",
-        "El futuro comienza con el primer paso que damos hacia el sueño que anhelamos.",
-        "No hay sueño pequeño cuando se persigue con pasión y determinación.",
-        "Cada sueño es una semilla que, con el cuidado adecuado, puede dar frutos sorprendentes.",
-        "Los sueños nos mantienen vivos, recordándonos que siempre hay algo por lo que luchar.",
-        "A veces, el primer paso para alcanzar tus sueños es simplemente creer que puedes hacerlo."
-    ],
-    misterio: [
-        "El misterio no se resuelve, se transforma en más preguntas.",
-        "Cada enigma es una invitación a explorar los límites de nuestra comprensión.",
-        "El universo es un vasto rompecabezas, y el misterio está en las piezas que aún no hemos encontrado.",
-        "Lo desconocido no es un vacío, sino un espacio lleno de posibilidades infinitas.",
-        "El misterio es el guardián de la verdad, ocultándola solo para los que se atreven a buscarla.",
-        "El misterio no se teme, se abraza, porque es la chispa que enciende la curiosidad.",
-        "Lo que no sabemos sobre el universo es mucho más grande que lo que creemos entender.",
-        "El misterio es un camino, no una respuesta, y quienes lo recorren nunca dejan de asombrarse."
-    ],
-    decisiones: [
-      "En la encrucijada, a veces el camino menos visible conduce a los tesoros más grandes.",
-      "La balanza del destino oscila según el peso de nuestras elecciones y omisiones.",
-      "Elegir es renunciar, pero también es abrazar posibilidades aún no manifestadas.",
-      "Los dados del destino ya están lanzados, pero tu mano puede modificar su caída.",
-      "El laberinto de opciones solo confunde a quien ha olvidado su verdadero norte.",
-      "Detrás de cada puerta cerrada hay un universo paralelo de lo que pudo ser.",
-      "La decisión más importante no es qué elegir, sino cómo impacta tu futuro la elección realizada.",
-      "Las consecuencias de tus elecciones dibujan mapas estelares en el firmamento de tu destino."
-    ],
-    ambigua: [ 
-      "Todo es probable, pero tu... que piensas?",
-      "algunas preguntas no tienen respuesta.",
-      "Las estrellas titilan, pero su mensaje es un eco distante.",
-      "Las sombras del destino son caprichosas y juegan al escondite.",
-      "El horizonte se curva, revelando y ocultando a la vez.", 
-      "Las respuestas están en las estrellas, pero se esconden tras nubes.", 
-      "Lo que buscas está cerca, aunque parezca lejano.", 
-      "El destino es un lienzo pintado con tonos inciertos.",
-      "Entre la luz y la sombra, se esconde la verdad que anhelas.",
-      "El universo habla en susurros que solo escuchan los pacientes.",
-      "Lo visible y lo invisible tejen una danza eterna en torno a tu pregunta.",
-      "Las ruedas del cosmos giran indiferentes a nuestras pequeñas dudas.",
-      "La verdad tiene muchas caras, todas ellas veladas por la percepción.",
-      "El enigma se resuelve cuando dejas de intentar descifrarlo."
-    ] 
+        "El verdadero campeón es aquel que nunca deja de luchar, incluso cuando la meta parece lejana.",
+        "El deporte es un lenguaje universal que une a las personas más allá de cualquier barrera.",
+        "La pasión por el deporte es lo que convierte un simple juego en una experiencia trascendental."
+    ]    
   };
   
   /**
@@ -239,7 +180,7 @@ const categories = {
     
     muerte: ['tumbas','muertos','muerto','destruira', 'destruir', 'nostradamus', 'acabará', 'mundo', 'muerte', 'morir', 'fallecimiento', 'funeral', 'más allá', 'fin', 'descanso eterno', 'tumba','tumbas', 'luto', 'pérdida', 'duelo', 'trascender', 'final', 'despedida', 'cementerio', 'alma', 'espíritu', 'vida eterna', 'fantasma', 'reencarnación', 'cometa', 'asteroide', 'meteoro', 'apocalipsis', 'cataclismo', 'impacto', 'colisión', 'extinción', 'desastre', 'catástrofe', 'calamidad', 'devastación', 'aniquilación', 'desolación', 'ruinas', 'cenizas', 'entierro', 'terminaré'],
     
-    viajes: ['corren','vuelan','viaje', 'mudanza', 'país', 'extranjero', 'aventura', 'destino', 'turismo', 'vacaciones', 'explorar', 'camino', 'recorrido', 'mapa', 'traslado', 'visitar', 'lejos', 'cerca', 'frontera', 'pasaporte', 'maleta', 'hotel', 'vuelo', 'avión', 'tren', 'viajar', 'conocer', 'descubrir', 'viajaré', 'exploraré', 'conoceré'],
+    viajes: ['viajara','corren','vuelan','viaje', 'mudanza', 'país', 'extranjero', 'aventura', 'destino', 'turismo', 'vacaciones', 'explorar', 'camino', 'recorrido', 'mapa', 'traslado', 'visitar', 'lejos', 'cerca', 'frontera', 'pasaporte', 'maleta', 'hotel', 'vuelo', 'avión', 'tren', 'viajar', 'conocer', 'descubrir', 'viajaré', 'exploraré', 'conoceré'],
     
     familia: ['familia', 'hijo', 'hija', 'padre', 'madre', 'hermano', 'hermana', 'pariente', 'hogar', 'casa', 'adopción', 'embarazo', 'padres', 'abuelos', 'nietos', 'herencia familiar', 'apellido', 'tradición', 'linaje', 'descendencia', 'familiar', 'consanguíneo', 'parentesco', 'cuidaré', 'amaré', 'protegeré'],
     
