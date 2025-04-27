@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Oráculo</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="./img/Favicon.png">
-</head>
-<body>
-<header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Single+Day&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/Favicon.png" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="main-content ojo_main">
+        <img
+          src="./img/Logo_oraculo.jpeg"
+          alt="imagen de oráculo"
+          class="imagen_ojo"
+        />
+      </div>
+      <br />
+      <div class="mensaje">
+        <h1>
+          Realizale una pregunta al Oráculo para obtener una respuesta
+          predictiva
+        </h1>
+      </div>
+      <input type="text" id="pregunta" placeholder="Haz tu pregunta..." />
+      <button onclick="consultar()">Consultar</button>
 
-</header>
-<main>
-    <div class="main-content ojo_main">
-        <img src="./img/Logo_oraculo.jpeg" alt="imagen de oráculo" class="imagen_ojo">
-    </div><br>
-    <h1>Oráculo</h1>
-    
-    <input type="text" id="pregunta" placeholder="Haz tu pregunta...">
-    <button onclick="consultar()">Consultar</button>
-    
-    <div class="respuesta" id="resultado"></div>
-</main> 
-<div class="content-wrapper"></div>
+      <div class="respuesta" id="resultado"></div>
+    </main>
+    <div class="content-wrapper"></div>
 
-<footer>
-        <img src="./img/logo_letra_blanca_sin_fondo.png" alt="logo desarrollador">
-</footer>    
+    <footer>
+      <img
+        src="./img/logo_letra_negra_sin_fondo.png"
+        alt="logo desarrollador"
+      />
+    </footer>
 
     <script src="cod_prediccion.js"></script>
     <script src="efecto_texto.js"></script>
-</body>
+  </body>
 </html>

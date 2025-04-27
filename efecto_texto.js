@@ -95,7 +95,6 @@ function calcularIndiceGlobal(palabras, indicePalabra, indiceLetra) {
 const estilosAguaFluido = document.createElement('style');
 estilosAguaFluido.textContent = `
     .respuesta {
-        background-color: var(--secundario-color);
         position: relative;
         overflow: hidden;
         display: flex;
@@ -104,10 +103,10 @@ estilosAguaFluido.textContent = `
     }
     
     .agua-text {
-        font-family: 'Trajan Pro', 'Times New Roman', serif;
-        font-size: 2rem;
+        font-family: "Dancing Script", 'Times New Roman', serif;
+        font-size: 3rem;
         line-height: 1.8;
-        color: #E1C78F;
+        color: #000000;
         width: 100%;
         height: 100%;
         position: relative;
@@ -137,8 +136,8 @@ estilosAguaFluido.textContent = `
         display: inline-block;
         opacity: 0;
         transform: translateY(15px);
-        color: #E1C78F;
-        text-shadow: 0 0 10px rgba(225, 199, 143, 0.7);
+        color: #000000;
+        text-shadow: 0 0 10px rgba(17, 12, 1, 0.7);
         animation: emerger-agua-fluido 1.2s forwards ease-out;
         will-change: transform, opacity;
     }
