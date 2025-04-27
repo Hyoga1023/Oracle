@@ -331,73 +331,74 @@ function normalizeText(text) {
 }
 
 // ====================== CORE DEL PREDICTOR ======================
+// Definiciones globales que deben estar disponibles para todas las funciones
+const dominantKeywords = {
+    trabajo: ['trabajo', 'empleo', 'contrato', 'entrevista', 'sueldo', 'ascenso', 'profesión', 'curriculum', 'despido'],
+    salud: ['salud', 'enfermedad', 'médico', 'hospital', 'tratamiento', 'dolor', 'síntoma', 'recuperación'],
+    dinero: ['dinero', 'riqueza', 'pagar', 'deuda', 'préstamo', 'inversión', 'lotería', 'ganar', 'ahorro'],
+    futuro: ['conseguirá', 'logrará', 'obtendrá', 'será', 'tendrá', 'podrá', 'encontrará', 'descubrirá'],
+    amor: ['amor', 'pareja', 'matrimonio', 'novio', 'novia', 'romance', 'enamorado', 'boda', 'divorcio'],
+    muerte: ['muerte', 'morir', 'fallecimiento', 'funeral', 'tumba', 'cementerio', 'apocalipsis', 'extinción'],
+    educacion: ['estudiar', 'universidad', 'carrera', 'examen', 'título', 'graduación', 'maestro', 'alumno'],
+    decisiones: ['decidir', 'elegir', 'escoger', 'duda', 'alternativa', 'preferir', 'debería', 'opción']
+};
+
 function detectCategory(question) {
-  if (!question || typeof question !== 'string' || question.trim() === '') {
-      return "ambigua"; // Categoría predeterminada si la pregunta es inválida.
-  }
-  
-  const normalized = normalizeText(question);
-  const scores = {};
+    // Validación mejorada con optional chaining
+    if (!question?.trim()) return "ambigua";
+    
+    const normalized = normalizeText(question);
+    const scores = {};
+    const wordCount = normalized.split(/\s+/).filter(w => w.length > 0).length;
 
-  // Calcular puntajes por categoría
-  for (const [category, keywords] of Object.entries(enhancedKeywords)) {
-      scores[category] = keywords.reduce((acc, keyword) => {
-          const regex = new RegExp(`\\b${keyword}\\b`, 'i');
-          const match = normalized.match(regex);
-          
-          if (match) {
-              let score = 2; // Puntaje base
-              // Bonus por posición (inicio/final de la pregunta)
-              if (match.index < 3 || match.index > normalized.length - keyword.length - 3) {
-                  score += 1;
-              }
-              return acc + score;
-          }
-          return acc; // Si no hay coincidencia, retornar acumulador sin cambios.
-      }, 0);
-  }
+    // Cálculo optimizado de puntajes
+    for (const [category, keywords] of Object.entries(enhancedKeywords)) {
+        scores[category] = keywords.reduce((acc, keyword) => {
+            const regex = new RegExp(`\\b${keyword}\\b`, 'i');
+            const match = normalized.match(regex);
+            
+            if (!match) return acc;
 
-  // Asignar peso adicional a categorías específicas
-  for (const category in scores) {
-      if (category !== "ambigua") {
-          scores[category] += 1; // Incrementar el puntaje de categorías no ambiguas.
-      }
-  }
+            let score = 2; // Puntaje base
+            
+            // Bonus por posición (inicio/final)
+            if (match.index < 3 || match.index > normalized.length - keyword.length - 3) {
+                score += 1;
+            }
+            
+            // Bonus por palabra dominante
+            if (dominantKeywords[category]?.includes(keyword)) {
+                score += 3;
+            }
+            
+            return acc + score;
+        }, 0);
+        
+        // Peso adicional para categorías no ambiguas
+        if (category !== "ambigua") scores[category] += 1;
+    }
 
-  // Determinar categoría dominante
-  let maxCategory = "ambigua";
-  let maxScore = 0;
+    // Determinación de categoría optimizada
+    const [maxCategory, maxScore] = Object.entries(scores).reduce(
+        ([currentCat, currentScore], [category, score]) => 
+            score > currentScore ? [category, score] : [currentCat, currentScore],
+        ["ambigua", 0]
+    );
 
-  for (const [category, score] of Object.entries(scores)) {
-      if (score > maxScore) {
-          maxScore = score;
-          maxCategory = category;
-      } else if (category !== "ambigua" && score >= maxScore * 0.8) {
-          // Priorizar categorías con puntaje cercano al máximo
-          maxCategory = category;
-      }
-  }
+    // Threshold dinámico mejorado
+    const threshold = wordCount <= 4 ? 2 : wordCount > 8 ? 5 : 3;
+    const finalCategory = maxScore >= threshold ? maxCategory : "ambigua";
 
-  // Threshold dinámico según longitud de la pregunta
-  const wordCount = normalized.split(/\s+/).filter(w => w.length > 0).length;
-  const threshold = wordCount <= 4 ? 2 : 3;
-
-  // Determinar categoría final
-  const finalCategory = maxScore >= threshold ? maxCategory : "ambigua";
-
-  // Añadir aquí el console.log para depuración
-  console.log(`Categoría detectada: ${finalCategory}, Puntajes:`, scores);
-
-  return finalCategory; // Retorna la categoría final
+    console.log(`Categoría detectada: ${finalCategory}, Puntajes:`, scores);
+    return finalCategory;
 }
 
 function generatePrediction(category, options = {}) {
+    // Configuración con valores por defecto mejorada
     const config = {
         specialPhraseChance: 0.1,
         combinedPhraseChance: 0.3,
         mysticalLevel: 2,
-        currentMoonPhase: null,
-        currentDate: new Date(),
         ...options
     };
 
@@ -406,21 +407,21 @@ function generatePrediction(category, options = {}) {
         return getRandomElement(specialPhrases);
     }
 
-    // Obtener frase base según categoría
+    // Obtener frase base según categoría con validación
     const categoryPhrases = categories[category] || categories.ambigua;
     let prediction = getRandomElement(categoryPhrases);
 
-    // Posible frase ambigua complementaria
-    if (Math.random() < config.combinedPhraseChance) {
+    // Frase complementaria con validación de existencia
+    if (Math.random() < config.combinedPhraseChance && categories.ambigua?.length) {
         prediction += " " + getRandomElement(categories.ambigua);
     }
 
-    // Elementos místicos según nivel
-    if (config.mysticalLevel >= 2 && Math.random() < 0.3) {
+    // Elementos místicos con validación
+    if (config.mysticalLevel >= 2 && mysticalElements.standard?.length) {
         prediction += " " + getRandomElement(mysticalElements.standard);
     }
     
-    if (config.mysticalLevel >= 3 && Math.random() < 0.2) {
+    if (config.mysticalLevel >= 3 && mysticalElements.cosmic?.length) {
         prediction += " " + getRandomElement(mysticalElements.cosmic);
     }
 
@@ -428,8 +429,19 @@ function generatePrediction(category, options = {}) {
 }
 
 function processPrediction(question, options = {}) {
+    // Validación básica de entrada
+    if (!question || typeof question !== 'string') {
+        throw new Error('Pregunta no válida');
+    }
+
     const detectedCategory = detectCategory(question);
     const category = options.category || detectedCategory;
+    
+    // Validación de categoría existente
+    if (!categories[category]) {
+        console.warn(`Categoría desconocida: ${category}, usando 'ambigua'`);
+        category = "ambigua";
+    }
     
     return {
         question,
@@ -439,6 +451,15 @@ function processPrediction(question, options = {}) {
         timestamp: new Date().toISOString(),
         mysticalLevel: options.mysticalLevel || 1,
         moonPhase: options.currentMoonPhase || "desconocida"
+    };
+}
+
+// Exportación para uso en navegador
+if (typeof window !== 'undefined') {
+    window.oraculo = {
+        detectCategory,
+        generatePrediction,
+        processPrediction
     };
 }
 
