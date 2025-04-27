@@ -69,6 +69,7 @@ const categories = {
       "Las huellas de tu existencia permanecen cuando el cuerpo ya se ha ido."
     ], 
     viajes: [
+      "Podrias elegir viajar o podrias elegir quedarte, el medio en el que lo hagas no importa.",
       "Los caminos se bifurcan en mil posibilidades, pero solo uno guarda tus pasos.",
       "Horizontes lejanos te llaman con voces solo audibles para el corazón inquieto.",
       "El explorador que vive en ti anhela tierras donde tu sombra nunca se ha proyectado.",
@@ -226,7 +227,7 @@ function normalizeText(text) {
 // ====================== CORE DEL PREDICTOR ======================
 function detectCategory(question) {
   if (!question || typeof question !== 'string' || question.trim() === '') {
-      return "ambigua";
+      return "ambigua"; // Categoría predeterminada si la pregunta es inválida.
   }
   
   const normalized = normalizeText(question);
@@ -246,17 +247,27 @@ function detectCategory(question) {
               }
               return acc + score;
           }
-          return acc;
+          return acc; // Si no hay coincidencia, retornar acumulador sin cambios.
       }, 0);
+  }
+
+  // Asignar peso adicional a categorías específicas
+  for (const category in scores) {
+      if (category !== "ambigua") {
+          scores[category] += 1; // Incrementar el puntaje de categorías no ambiguas.
+      }
   }
 
   // Determinar categoría dominante
   let maxCategory = "ambigua";
   let maxScore = 0;
-  
+
   for (const [category, score] of Object.entries(scores)) {
       if (score > maxScore) {
           maxScore = score;
+          maxCategory = category;
+      } else if (category !== "ambigua" && score >= maxScore * 0.8) {
+          // Priorizar categorías con puntaje cercano al máximo
           maxCategory = category;
       }
   }
@@ -265,13 +276,15 @@ function detectCategory(question) {
   const wordCount = normalized.split(/\s+/).filter(w => w.length > 0).length;
   const threshold = wordCount <= 4 ? 2 : 3;
 
+  // Determinar categoría final
   const finalCategory = maxScore >= threshold ? maxCategory : "ambigua";
 
-  // Añadir aquí el console.log
+  // Añadir aquí el console.log para depuración
   console.log(`Categoría detectada: ${finalCategory}, Puntajes:`, scores);
 
-  return finalCategory;
+  return finalCategory; // Retorna la categoría final
 }
+
 function generatePrediction(category, options = {}) {
     const config = {
         specialPhraseChance: 0.1,
