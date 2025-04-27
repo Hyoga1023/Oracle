@@ -39,6 +39,7 @@ const categories = {
       "puede ser que el clima sea el que quieres, ten cuidado con lo que deseas."
     ],
     trabajo: [
+      "Quien siembra sin rendirse cosecha frutos jugosos.",
       "El camino profesional se ilumina con la antorcha de la perseverancia.",
       "Nuevos horizontes laborales se asoman tras la niebla de la incertidumbre.",
       "Las semillas del esfuerzo germinarán en terrenos inesperados.",
@@ -100,6 +101,91 @@ const categories = {
       "Cada lección aprendida es un faro que ilumina territorios aún inexplorados.",
       "El estudioso paciente descubre que algunas preguntas son más valiosas que sus respuestas."
     ],
+    amistad: [
+        "La amistad verdadera es un refugio donde el alma se siente en casa.",
+        "Los amigos son estrellas que iluminan la oscuridad de nuestros días más grises.",
+        "Un amigo es la familia que elegimos para caminar juntos en este viaje llamado vida.",
+        "La amistad no se mide en tiempo, sino en momentos compartidos.",
+        "Los amigos son los pilares invisibles que sostienen nuestra felicidad.",
+        "La confianza en la amistad es un lazo invisible pero indestructible.",
+        "En los buenos y malos momentos, un verdadero amigo está allí, en silencio pero presente.",
+        "La lealtad de un amigo es el regalo más precioso que la vida puede ofrecer."
+    ],
+    espiritualidad: [
+        "El alma encuentra paz en la quietud, cuando el ego se desvanece.",
+        "La fe no se trata de ver lo que está frente a ti, sino de confiar en lo que no ves.",
+        "El viaje espiritual es hacia adentro, donde reside la verdad más profunda.",
+        "La meditación es la llave que abre la puerta hacia el conocimiento interior.",
+        "La energía que compartimos con el mundo es la misma que el universo nos ofrece.",
+        "Cuando la mente se calma, el espíritu despierta.",
+        "La conexión con el cosmos es una danza silenciosa que trasciende las palabras.",
+        "La iluminación no se alcanza con el conocimiento, sino con la comprensión profunda del ser."
+    ],
+    
+    tecnología: [
+        "La tecnología no solo cambia el mundo, sino también la forma en que vivimos en él.",
+        "El futuro se teje con hilos invisibles de datos y algoritmos.",
+        "Cada innovación tecnológica es una puerta hacia lo desconocido.",
+        "La tecnología es el espejo del pensamiento humano, reflejando nuestras creaciones y limitaciones.",
+        "Los avances tecnológicos no son solo máquinas, son extensiones de nuestra imaginación.",
+        "El verdadero poder de la tecnología radica en la forma en que mejora nuestra humanidad.",
+        "En el futuro, las máquinas no serán solo herramientas, sino compañeros de nuestro viaje.",
+        "La tecnología evoluciona constantemente, y nosotros con ella, adaptándonos a cada cambio."
+    ],
+    
+    arte_creatividad: [
+        "El arte es el lenguaje del alma, expresado a través de colores, formas y sonidos.",
+        "La creatividad es la chispa que enciende el fuego de la innovación.",
+        "Cada obra de arte es una ventana hacia el mundo interior del creador.",
+        "La imaginación no tiene límites, y el arte es su mejor reflejo.",
+        "La belleza del arte está en su capacidad para hacer que lo invisible se vuelva tangible.",
+        "La creatividad fluye como un río que no se puede detener, solo dirigir.",
+        "El arte no solo se observa, se siente, se vive, se respira.",
+        "Un pincel en las manos de un artista es como una varita mágica que transforma el lienzo en sueños."
+    ],
+    
+    deporte: [
+        "El deporte no solo forja el cuerpo, también fortalece el espíritu.",
+        "Cada entrenamiento es una pequeña victoria sobre nuestras propias limitaciones.",
+        "El verdadero deporte no es solo competencia, es superación constante.",
+        "En el deporte, la mente es tan importante como el cuerpo, ya que ambos deben estar en sincronía.",
+        "La victoria no siempre se mide en trofeos, sino en el esfuerzo invertido.",
+        "El equipo es una unidad que se construye sobre la confianza y el esfuerzo conjunto.",
+        "El deporte enseña que la caída no es el final, sino el impulso para levantarse más fuerte.",
+        "En cada partido, el verdadero desafío es vencer tus propios miedos y dudas."
+    ],
+    
+    naturaleza: [
+        "La naturaleza no es un lugar al que vamos, es nuestra casa.",
+        "Los árboles cuentan historias que el viento susurra solo a aquellos que escuchan.",
+        "La biodiversidad es el alma del planeta, cada especie es una nota en su melodía.",
+        "El sol no solo ilumina, también inspira a quienes lo buscan.",
+        "La tierra respira con nosotros, y si la escuchamos, nos hablará de su historia.",
+        "La naturaleza es el reflejo perfecto de lo que somos: siempre en equilibrio entre caos y orden.",
+        "Cada amanecer es una nueva oportunidad para abrazar la belleza que la naturaleza nos ofrece.",
+        "La calma del bosque enseña que el silencio tiene mucho que decir."
+    ],
+    
+    sueños: [
+        "Los sueños son mapas que guían nuestra alma hacia lo desconocido.",
+        "El éxito no está en lo que alcanzas, sino en la valentía de perseguir tus sueños.",
+        "Los sueños se tejen con hilos de esperanza y acciones decididas.",
+        "El futuro comienza con el primer paso que damos hacia el sueño que anhelamos.",
+        "No hay sueño pequeño cuando se persigue con pasión y determinación.",
+        "Cada sueño es una semilla que, con el cuidado adecuado, puede dar frutos sorprendentes.",
+        "Los sueños nos mantienen vivos, recordándonos que siempre hay algo por lo que luchar.",
+        "A veces, el primer paso para alcanzar tus sueños es simplemente creer que puedes hacerlo."
+    ],
+    misterio: [
+        "El misterio no se resuelve, se transforma en más preguntas.",
+        "Cada enigma es una invitación a explorar los límites de nuestra comprensión.",
+        "El universo es un vasto rompecabezas, y el misterio está en las piezas que aún no hemos encontrado.",
+        "Lo desconocido no es un vacío, sino un espacio lleno de posibilidades infinitas.",
+        "El misterio es el guardián de la verdad, ocultándola solo para los que se atreven a buscarla.",
+        "El misterio no se teme, se abraza, porque es la chispa que enciende la curiosidad.",
+        "Lo que no sabemos sobre el universo es mucho más grande que lo que creemos entender.",
+        "El misterio es un camino, no una respuesta, y quienes lo recorren nunca dejan de asombrarse."
+    ],
     decisiones: [
       "En la encrucijada, a veces el camino menos visible conduce a los tesoros más grandes.",
       "La balanza del destino oscila según el peso de nuestras elecciones y omisiones.",
@@ -154,8 +240,24 @@ const categories = {
     
     decisiones: ['decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'escoger', 'elegir', 'indecisión', 'consecuencia', 'encrucijada', 'resolver', 'determinar', 'preferir', 'seleccionar', 'incertidumbre', 'crisis', 'decisión', 'definir', 'deliberar', 'evaluar', 'considerar', 'valorar'],
 
-    educacion: ['titulo','estudiar','estudio', 'universidad', 'semestre', 'carrera', 'escuela', 'aprender', 'título', 'examen', 'aprobar', 'maestro', 'alumno', 'conocimiento', 'sabiduría', 'curso', 'materia', 'academia', 'graduación', 'tesis', 'máster', 'doctorado', 'beca', 'libro', 'lección', 'enseñanza', 'aprendizaje', 'educación', 'estudiar']
-  };
+    educacion: ['titulo','estudiar','estudio', 'universidad', 'semestre', 'carrera', 'escuela', 'aprender', 'título', 'examen', 'aprobar', 'maestro', 'alumno', 'conocimiento', 'sabiduría', 'curso', 'materia', 'academia', 'graduación', 'tesis', 'máster', 'doctorado', 'beca', 'libro', 'lección', 'enseñanza', 'aprendizaje', 'educación', 'estudiar'],
+    
+    amistad: ['amistad', 'amigo', 'amiga', 'colegas', 'compañeros', 'cercanía', 'fraternidad', 'lealtad', 'confianza', 'solidaridad', 'vínculo', 'camaradería', 'hermandad', 'conexión', 'compinche', 'pana', 'parcero', 'unión'],
+    
+    espiritualidad: ['espiritualidad', 'alma', 'fe', 'dios', 'religión', 'meditación', 'yoga', 'oración', 'trascendencia', 'karma', 'iluminación', 'nirvana', 'paz interior', 'guía espiritual', 'mantra', 'energía', 'universo', 'cosmos', 'espíritu'],
+    
+    tecnología: ['tecnología', 'innovación', 'inteligencia artificial', 'internet', 'computadora', 'móvil', 'software', 'hardware', 'aplicaciones', 'redes sociales', 'ciberseguridad', 'digital', 'datos', 'sistema', 'programación', 'gadgets', 'futuro tecnológico', 'realidad virtual', 'avances'],
+    
+    arte_creatividad: ['arte', 'creatividad', 'pintura', 'música', 'danza', 'literatura', 'escultura', 'dibujo', 'cine', 'fotografía', 'poema', 'inspiración', 'expresión', 'diseño', 'estética', 'imaginación', 'galería', 'artesano', 'talento', 'cultura'],
+    
+    deporte: ['deporte', 'fútbol', 'baloncesto', 'correr', 'entrenamiento', 'ejercicio', 'equipo', 'competencia', 'salud física', 'atletismo', 'partido', 'juego', 'gimnasio', 'natación', 'ciclismo', 'victoria', 'derrota', 'energía', 'rendimiento', 'yoga', 'lucha'],
+    
+    naturaleza: ['naturaleza', 'medio ambiente', 'planeta', 'tierra', 'árboles', 'flores', 'animales', 'ecosistema', 'clima', 'biodiversidad', 'reciclaje', 'sostenibilidad', 'contaminación', 'aire', 'agua', 'fuego', 'conservación', 'recursos', 'vida salvaje', 'bosque', 'selva', 'desierto'],
+    
+    sueños: ['sueños', 'metas', 'objetivos', 'aspiraciones', 'éxito', 'ambición', 'deseo', 'motivación', 'superación', 'logro', 'esperanza', 'ideal', 'proyecto', 'propósito', 'visión', 'empeño', 'determinación', 'alcanzar', 'sueño cumplido'],
+    
+    misterio: ['misterio', 'ovnis', 'extraterrestres', 'dimensiones', 'tiempo', 'espacio', 'fenómenos', 'paranormal', 'fantasmas', 'secretos', 'incógnitas', 'enigmas', 'conspiración', 'universo', 'agujero negro', 'multiverso', 'portal', 'desconocido', 'misticismo']
+};
   
   /**
    * Frases especiales que aparecen con baja probabilidad
