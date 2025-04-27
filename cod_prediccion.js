@@ -157,7 +157,28 @@ const categories = {
         "El verdadero campeón es aquel que nunca deja de luchar, incluso cuando la meta parece lejana.",
         "El deporte es un lenguaje universal que une a las personas más allá de cualquier barrera.",
         "La pasión por el deporte es lo que convierte un simple juego en una experiencia trascendental."
-    ]    
+    ],
+    decisiones: [
+        "El camino que elijas definirá tu destino",
+        "Ante la duda, escucha a tu corazón pero no ignores tu razón",
+        "Cada decisión abre unas puertas y cierra otras",
+        "La sabiduría está en sopesar las consecuencias",
+        "A veces no elegir también es una decisión",
+        "Las decisiones son como semillas, algunas florecen y otras marchitan",
+        "El futuro es incierto, pero cada elección lo moldea",
+        "Las decisiones son espejos que reflejan nuestras prioridades y valores",
+        "Cada elección es un paso hacia lo desconocido, pero también hacia el crecimiento",
+    ],  
+    ambigua: [
+        "Los astros no están alineados claramente",
+        "El universo guarda silencio por ahora",
+        "La respuesta se revelará en el momento adecuado",
+        "El destino es incierto y cambiante",
+        "Las sombras del futuro son confusas",
+        "Las cartas están en la mesa, pero el juego aún no ha comenzado",
+        "El oráculo no tiene una respuesta clara en este momento",
+        "Las estrellas titilan, pero no revelan su secreto"
+    ]            
   };
   
   /**
@@ -371,38 +392,52 @@ function generatePrediction(category, options = {}) {
 }
 
 function processPrediction(question, options = {}) {
-    // Validación básica de entrada
-    if (!question || typeof question !== 'string') {
-        throw new Error('Pregunta no válida');
-    }
+    try {
+        // Validación básica pero sin lanzar errores
+        if (typeof question !== 'string' || question.trim() === '') {
+            question = "El silencio también es una respuesta";
+        }
 
-    const detectedCategory = detectCategory(question);
-    const category = options.category || detectedCategory;
-    
-    // Validación de categoría existente
-    if (!categories[category]) {
-        console.warn(`Categoría desconocida: ${category}, usando 'ambigua'`);
-        category = "ambigua";
-    }
-    
-    return {
-        question,
-        prediction: generatePrediction(category, options),
-        category,
-        detectedCategory,
-        timestamp: new Date().toISOString(),
-        mysticalLevel: options.mysticalLevel || 1,
-        moonPhase: options.currentMoonPhase || "desconocida"
-    };
-}
+        // Siempre obtener una categoría, incluso si hay errores
+        let category;
+        try {
+            category = detectCategory(question) || 'ambigua';
+        } catch {
+            category = 'ambigua';
+        }
 
-// Exportación para uso en navegador
-if (typeof window !== 'undefined') {
-    window.oraculo = {
-        detectCategory,
-        generatePrediction,
-        processPrediction
-    };
+        // Asegurar que la categoría existe y tiene respuestas
+        if (!categories[category] || categories[category].length === 0) {
+            category = 'ambigua';
+        }
+
+        // Generar siempre una predicción, aunque sea ambigua
+        let prediction;
+        try {
+            prediction = generatePrediction(category, options);
+        } catch {
+            prediction = getRandomElement(categories.ambigua) || 
+                       "Los astros se alinean de manera misteriosa";
+        }
+
+        return {
+            question: question.trim(),
+            prediction,
+            category,
+            timestamp: new Date().toISOString(),
+            mysticalLevel: options.mysticalLevel || 1
+        };
+
+    } catch {
+        // Respuesta de último recurso si todo falla
+        return {
+            question: question,
+            prediction: "El universo conspira a tu favor, aunque no lo veas ahora",
+            category: 'ambigua',
+            timestamp: new Date().toISOString(),
+            mysticalLevel: 1
+        };
+    }
 }
 
 // ====================== FUNCIONES AVANZADAS ======================
