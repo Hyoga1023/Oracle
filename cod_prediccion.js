@@ -225,45 +225,44 @@ const categories = {
    * Incluye nuevas palabras clave para las categorías añadidas
    */
   const enhancedKeywords = {
-    clima: ['mañana','lloverá','clima', 'tiempo', 'lluvia', 'sol', 'nieve', 'tormenta', 'viento', 'calor', 'frío', 'humedad', 'pronóstico', 'meteorología', 'temperatura', 'cielo', 'atmosfera'],
+    clima: ['mañana','lloverá','clima', 'tiempo', 'lluvia', 'sol', 'nieve', 'tormenta', 'viento', 'calor', 'frío', 'humedad', 'pronóstico', 'meteorología', 'temperatura', 'cielo', 'atmosfera', 'soplará', 'nevará', 'brillará'],
     
-    amor: ['amor', 'pareja', 'relación', 'novio', 'novia', 'matrimonio', 'boda', 'romance', 'enamorado', 'corazón', 'sentimiento', 'pasión', 'amoroso', 'romántico', 'flechazo', 'amante', 'crush', 'ex', 'divorcio', 'romper'],
+    amor: ['amor', 'pareja', 'relación', 'novio', 'novia', 'matrimonio', 'boda', 'romance', 'enamorado', 'corazón', 'sentimiento', 'pasión', 'amoroso', 'romántico', 'flechazo', 'amante', 'crush', 'ex', 'divorcio', 'romper', 'amaré', 'besaré', 'cuidaré', 'enamoraré'],
     
-    salud: ['salud', 'enfermedad', 'dolor', 'sanar', 'médico', 'hospital', 'bienestar', 'dolencia', 'recuperación', 'cuerpo', 'medicina', 'tratamiento', 'síntoma', 'malestar', 'saludable', 'virus', 'físico', 'mental', 'curar', 'enfermo'],
+    salud: ['salud', 'enfermedad', 'dolor', 'sanar', 'médico', 'hospital', 'bienestar', 'dolencia', 'recuperación', 'cuerpo', 'medicina', 'tratamiento', 'síntoma', 'malestar', 'saludable', 'virus', 'físico', 'mental', 'curar', 'enfermo', 'sanaré', 'mejoraré'],
     
-    dinero: ['baloto', 'dinero', 'riqueza', 'fortuna', 'finanzas', 'económico', 'inversión', 'negocio', 'ahorro', 'ganancia', 'prosperidad', 'abundancia', 'capital', 'billete', 'precio', 'compra', 'venta', 'deuda', 'préstamo', 'lotería', 'herencia', 'banco', 'millonario', 'pagar', 'cobrar', 'ganar'],
+    dinero: ['baloto', 'dinero', 'riqueza', 'fortuna', 'finanzas', 'económico', 'inversión', 'negocio', 'ahorro', 'ganancia', 'prosperidad', 'abundancia', 'capital', 'billete', 'precio', 'compra', 'venta', 'deuda', 'préstamo', 'lotería', 'herencia', 'banco', 'millonario', 'pagar', 'cobrar', 'ganar', 'invertiré', 'compraré', 'ahorraré'],
     
-    trabajo: ['trabajo', 'empleo', 'profesión', 'carrera', 'laboral', 'jefe', 'ascenso', 'empresa', 'oficina', 'proyecto', 'ocupación', 'puesto', 'sueldo', 'profesional', 'curriculum', 'entrevista', 'compañeros', 'despido', 'contrato', 'habilidades', 'experiencia'],
+    trabajo: ['trabajo', 'empleo', 'profesión', 'carrera', 'laboral', 'jefe', 'ascenso', 'empresa', 'oficina', 'proyecto', 'ocupación', 'puesto', 'sueldo', 'profesional', 'curriculum', 'entrevista', 'compañeros', 'despido', 'contrato', 'habilidades', 'experiencia', 'trabajaré', 'ascenderé', 'contrataré'],
     
-    futuro: ['dejará', 'preparar', 'anticipar', 'planear', 'proyectar', 'intentaré', 'correré', 'volaré', 'lograré', 'futuro', 'destino', 'porvenir', 'mañana', 'camino', 'rumbo', 'suerte', 'vida', 'plan', 'adelante', 'próximo', 'después', 'predecir', 'adivinar', 'años', 'tiempo', 'pronóstico', 'vaticinio', 'presagio', 'profecía', 'augurio'],
+    futuro: ['dejará', 'preparar', 'anticipar', 'planear', 'proyectar', 'intentaré', 'correré', 'volaré', 'lograré', 'futuro', 'destino', 'porvenir', 'mañana', 'camino', 'rumbo', 'suerte', 'vida', 'plan', 'adelante', 'próximo', 'después', 'predecir', 'adivinar', 'años', 'tiempo', 'pronóstico', 'vaticinio', 'presagio', 'profecía', 'augurio', 'veré', 'alcanzaré', 'conseguiré'],
     
-    muerte: ['tumbas','muertos','muerto','destruira', 'destruir', 'nostradamus', 'acabará', 'mundo', 'muerte', 'morir', 'fallecimiento', 'funeral', 'más allá', 'fin', 'descanso eterno', 'tumba','tumbas', 'luto', 'pérdida', 'duelo', 'trascender', 'final', 'despedida', 'cementerio', 'alma', 'espíritu', 'vida eterna', 'fantasma', 'reencarnación', 'cometa', 'asteroide', 'meteoro', 'apocalipsis', 'cataclismo', 'impacto', 'colisión', 'extinción', 'desastre', 'catástrofe', 'calamidad', 'devastación', 'aniquilación', 'desolación', 'ruinas', 'cenizas', 'entierro'],
-
-    viajes: ['corren','vuelan','viaje', 'mudanza', 'país', 'extranjero', 'aventura', 'destino', 'turismo', 'vacaciones', 'explorar', 'camino', 'recorrido', 'mapa', 'traslado', 'visitar', 'lejos', 'cerca', 'frontera', 'pasaporte', 'maleta', 'hotel', 'vuelo', 'avión', 'tren', 'viajar', 'conocer', 'descubrir'],
+    muerte: ['tumbas','muertos','muerto','destruira', 'destruir', 'nostradamus', 'acabará', 'mundo', 'muerte', 'morir', 'fallecimiento', 'funeral', 'más allá', 'fin', 'descanso eterno', 'tumba','tumbas', 'luto', 'pérdida', 'duelo', 'trascender', 'final', 'despedida', 'cementerio', 'alma', 'espíritu', 'vida eterna', 'fantasma', 'reencarnación', 'cometa', 'asteroide', 'meteoro', 'apocalipsis', 'cataclismo', 'impacto', 'colisión', 'extinción', 'desastre', 'catástrofe', 'calamidad', 'devastación', 'aniquilación', 'desolación', 'ruinas', 'cenizas', 'entierro', 'terminaré'],
     
-    familia: ['familia', 'hijo', 'hija', 'padre', 'madre', 'hermano', 'hermana', 'pariente', 'hogar', 'casa', 'adopción', 'embarazo', 'padres', 'abuelos', 'nietos', 'herencia familiar', 'apellido', 'tradición', 'linaje', 'descendencia', 'familiar', 'consanguíneo', 'parentesco'],
+    viajes: ['corren','vuelan','viaje', 'mudanza', 'país', 'extranjero', 'aventura', 'destino', 'turismo', 'vacaciones', 'explorar', 'camino', 'recorrido', 'mapa', 'traslado', 'visitar', 'lejos', 'cerca', 'frontera', 'pasaporte', 'maleta', 'hotel', 'vuelo', 'avión', 'tren', 'viajar', 'conocer', 'descubrir', 'viajaré', 'exploraré', 'conoceré'],
     
-    decisiones: ['ganara','decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'escoger', 'elegir', 'indecisión', 'consecuencia', 'encrucijada', 'resolver', 'determinar', 'preferir', 'seleccionar', 'incertidumbre', 'crisis', 'decisión', 'definir', 'deliberar', 'evaluar', 'considerar', 'valorar'],
-
-    educacion: ['titulo','estudiar','estudio', 'universidad', 'semestre', 'carrera', 'escuela', 'aprender', 'título', 'examen', 'aprobar', 'maestro', 'alumno', 'conocimiento', 'sabiduría', 'curso', 'materia', 'academia', 'graduación', 'tesis', 'máster', 'doctorado', 'beca', 'libro', 'lección', 'enseñanza', 'aprendizaje', 'educación', 'estudiar'],
+    familia: ['familia', 'hijo', 'hija', 'padre', 'madre', 'hermano', 'hermana', 'pariente', 'hogar', 'casa', 'adopción', 'embarazo', 'padres', 'abuelos', 'nietos', 'herencia familiar', 'apellido', 'tradición', 'linaje', 'descendencia', 'familiar', 'consanguíneo', 'parentesco', 'cuidaré', 'amaré', 'protegeré'],
     
-    amistad: ['amistad', 'amigo', 'amiga', 'colegas', 'compañeros', 'cercanía', 'fraternidad', 'lealtad', 'confianza', 'solidaridad', 'vínculo', 'camaradería', 'hermandad', 'conexión', 'compinche', 'pana', 'parcero', 'unión'],
+    decisiones: ['ganara','decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'escoger', 'elegir', 'indecisión', 'consecuencia', 'encrucijada', 'resolver', 'determinar', 'preferir', 'seleccionar', 'incertidumbre', 'crisis', 'decisión', 'definir', 'deliberar', 'evaluar', 'considerar', 'valorar', 'elegiré', 'decidiré', 'resolveré'],
     
-    espiritualidad: ['espiritualidad', 'alma', 'fe', 'dios', 'religión', 'meditación', 'yoga', 'oración', 'trascendencia', 'karma', 'iluminación', 'nirvana', 'paz interior', 'guía espiritual', 'mantra', 'energía', 'universo', 'cosmos', 'espíritu'],
+    educacion: ['titulo','estudiar','estudio', 'universidad', 'semestre', 'carrera', 'escuela', 'aprender', 'título', 'examen', 'aprobar', 'maestro', 'alumno', 'conocimiento', 'sabiduría', 'curso', 'materia', 'academia', 'graduación', 'tesis', 'máster', 'doctorado', 'beca', 'libro', 'lección', 'enseñanza', 'aprendizaje', 'educación', 'estudiar', 'aprenderé', 'aprobaré', 'graduaré'],
     
-    tecnología: ['IA','tecnología', 'innovación', 'inteligencia artificial', 'internet', 'computadora', 'móvil', 'software', 'hardware', 'aplicaciones', 'redes sociales', 'ciberseguridad', 'digital', 'datos', 'sistema', 'programación', 'gadgets', 'futuro tecnológico', 'realidad virtual', 'celular','celulares','avances'],
+    amistad: ['amistad', 'amigo', 'amiga', 'colegas', 'compañeros', 'cercanía', 'fraternidad', 'lealtad', 'confianza', 'solidaridad', 'vínculo', 'camaradería', 'hermandad', 'conexión', 'compinche', 'pana', 'parcero', 'unión', 'seré', 'apoyaré', 'ayudaré'],
     
-    arte_creatividad: ['arte', 'creatividad', 'pintura', 'música', 'danza', 'literatura', 'escultura', 'dibujo', 'cine', 'fotografía', 'poema', 'inspiración', 'expresión', 'diseño', 'estética', 'imaginación', 'galería', 'artesano', 'talento', 'cultura'],
+    espiritualidad: ['espiritualidad', 'alma', 'fe', 'dios', 'religión', 'meditación', 'yoga', 'oración', 'trascendencia', 'karma', 'iluminación', 'nirvana', 'paz interior', 'guía espiritual', 'mantra', 'energía', 'universo', 'cosmos', 'espíritu', 'meditaré', 'oraré', 'encontraré'],
     
-    deporte: ['partidos','mundial','eliminatorias','selección','deporte', 'fútbol', 'baloncesto', 'correr', 'entrenamiento', 'ejercicio', 'equipo', 'competencia', 'salud física', 'atletismo', 'partido', 'juego', 'gimnasio', 'natación', 'ciclismo', 'victoria', 'derrota', 'energía', 'rendimiento', 'yoga', 'lucha'],
+    tecnología: ['IA','tecnología', 'innovación', 'inteligencia artificial', 'internet', 'computadora', 'móvil', 'software', 'hardware', 'aplicaciones', 'redes sociales', 'ciberseguridad', 'digital', 'datos', 'sistema', 'programación', 'gadgets', 'futuro tecnológico', 'realidad virtual', 'celular','celulares','avances', 'programaré', 'desarrollaré', 'innovaré'],
     
-    naturaleza: ['naturaleza', 'medio ambiente', 'planeta', 'tierra', 'árboles', 'flores', 'animales', 'ecosistema', 'clima', 'biodiversidad', 'reciclaje', 'sostenibilidad', 'contaminación', 'aire', 'agua', 'fuego', 'conservación', 'recursos', 'vida salvaje', 'bosque', 'selva', 'desierto'],
+    arte_creatividad: ['arte', 'creatividad', 'pintura', 'música', 'danza', 'literatura', 'escultura', 'dibujo', 'cine', 'fotografía', 'poema', 'inspiración', 'expresión', 'diseño', 'estética', 'imaginación', 'galería', 'artesano', 'talento', 'cultura', 'crear', 'dibujaré', 'pintaré'],
     
-    sueños: ['sueños', 'metas', 'objetivos', 'aspiraciones', 'éxito', 'ambición', 'deseo', 'motivación', 'superación', 'logro', 'esperanza', 'ideal', 'proyecto', 'propósito', 'visión', 'empeño', 'determinación', 'alcanzar', 'sueño cumplido'],
+    deporte: ['partidos','mundial','eliminatorias','selección','deporte', 'fútbol', 'baloncesto', 'correr', 'entrenamiento', 'ejercicio', 'equipo', 'competencia', 'salud física', 'atletismo', 'partido', 'juego', 'gimnasio', 'natación', 'ciclismo', 'victoria', 'derrota', 'energía', 'rendimiento', 'yoga', 'lucha', 'correré', 'entrenaré', 'jugaré'],
     
-    misterio: ['misterio', 'ovnis', 'extraterrestres', 'dimensiones', 'tiempo', 'espacio', 'fenómenos', 'paranormal', 'fantasmas', 'secretos', 'incógnitas', 'enigmas', 'conspiración', 'universo', 'agujero negro', 'multiverso', 'portal', 'desconocido', 'misticismo']
+    naturaleza: ['naturaleza', 'medio ambiente', 'planeta', 'tierra', 'árboles', 'flores', 'animales', 'ecosistema', 'clima', 'biodiversidad', 'reciclaje', 'sostenibilidad', 'contaminación', 'aire', 'agua', 'fuego', 'conservación', 'recursos', 'vida salvaje', 'bosque', 'selva', 'desierto', 'protegeré', 'preservaré'],
+    
+    sueños: ['sueños', 'metas', 'objetivos', 'aspiraciones', 'éxito', 'ambición', 'deseo', 'motivación', 'superación', 'logro', 'esperanza', 'ideal', 'proyecto', 'propósito', 'visión', 'empeño', 'determinación', 'alcanzar', 'sueño cumplido', 'alcanzaré', 'lograré'],
+    
+    misterio: ['misterio', 'ovnis', 'extraterrestres', 'dimensiones', 'tiempo', 'espacio', 'fenómenos', 'paranormal', 'fantasmas', 'secretos', 'incógnitas', 'enigmas', 'conspiración', 'universo', 'agujero negro', 'multiverso', 'portal', 'desconocido', 'misticismo', 'descubriré', 'exploraré', 'investigaré']
 };
-  
   /**
    * Frases especiales que aparecen con baja probabilidad
    * Se utilizan cuando el oráculo "no quiere" dar una respuesta clara
