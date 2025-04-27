@@ -31,8 +31,10 @@
         </h1>
       </div>
       <input type="text" id="pregunta" placeholder="Haz tu pregunta..." />
-      <button onclick="consultar()">Consultar</button>
-
+      <div class="botones">
+        <button onclick="consultar()">Consultar</button>
+        <button id="limpiarBtn">Limpiar</button>
+      </div>
       <div class="respuesta" id="resultado"></div>
     </main>
     <div class="content-wrapper"></div>
@@ -43,8 +45,7 @@
         alt="logo desarrollador"
       />
     </footer>
-
     <script src="cod_prediccion.js"></script>
-    <script src="efecto_texto.js"></script>
+<script type="module" src="efecto_texto.js"></script>
   </body>
 </html>

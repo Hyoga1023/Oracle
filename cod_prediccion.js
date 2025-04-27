@@ -1,4 +1,5 @@
 
+
 const categories = { 
     amor: [ 
       "El corazón danza al compás de un destino incierto.", 
@@ -30,6 +31,13 @@ const categories = {
       "La abundancia busca a quien no la persigue con desesperación.",
       "Las semillas de la riqueza florecen en terrenos inesperados."
     ], 
+    clima:[
+      "Las nubes se disipan, pero el sol aún no se asoma.",
+      "El viento susurra secretos de cambios inminentes.",
+      "La lluvia puede ser bendición o tormenta, según el corazón que la reciba.",
+      "a veces quieres ver el sol, pero la lluvia es necesaria.",
+      "puede ser que el clima sea el que quieres, ten cuidado con lo que deseas."
+    ],
     trabajo: [
       "El camino profesional se ilumina con la antorcha de la perseverancia.",
       "Nuevos horizontes laborales se asoman tras la niebla de la incertidumbre.",
@@ -102,6 +110,10 @@ const categories = {
       "Las consecuencias de tus elecciones dibujan mapas estelares en el firmamento de tu destino."
     ],
     ambigua: [ 
+      "Todo es probable, pero tu... que piensas?",
+      "algunas preguntas no tienen respuesta.",
+      "Las estrellas titilan, pero su mensaje es un eco distante.",
+      "Las sombras del destino son caprichosas y juegan al escondite.",
       "El horizonte se curva, revelando y ocultando a la vez.", 
       "Las respuestas están en las estrellas, pero se esconden tras nubes.", 
       "Lo que buscas está cerca, aunque parezca lejano.", 
@@ -120,27 +132,28 @@ const categories = {
    * Palabras clave organizadas por categoría para identificar el tema de la consulta
    * Incluye nuevas palabras clave para las categorías añadidas
    */
-  const categoryKeywords = {
+  const enhancedKeywords = {
+    clima: ['mañana','lloverá','clima', 'tiempo', 'lluvia', 'sol', 'nieve', 'tormenta', 'viento', 'calor', 'frío', 'humedad', 'pronóstico', 'meteorología', 'temperatura', 'cielo', 'atmosfera'],
+    
     amor: ['amor', 'pareja', 'relación', 'novio', 'novia', 'matrimonio', 'boda', 'romance', 'enamorado', 'corazón', 'sentimiento', 'pasión', 'amoroso', 'romántico', 'flechazo', 'amante', 'crush', 'ex', 'divorcio', 'romper'],
     
     salud: ['salud', 'enfermedad', 'dolor', 'sanar', 'médico', 'hospital', 'bienestar', 'dolencia', 'recuperación', 'cuerpo', 'medicina', 'tratamiento', 'síntoma', 'malestar', 'saludable', 'virus', 'físico', 'mental', 'curar', 'enfermo'],
     
-    dinero: ['dinero', 'riqueza', 'fortuna', 'finanzas', 'económico', 'inversión', 'negocio', 'ahorro', 'ganancia', 'prosperidad', 'abundancia', 'capital', 'billete', 'precio', 'compra', 'venta', 'deuda', 'préstamo', 'lotería', 'herencia', 'banco', 'millonario', 'pagar', 'cobrar'],
+    dinero: ['baloto', 'dinero', 'riqueza', 'fortuna', 'finanzas', 'económico', 'inversión', 'negocio', 'ahorro', 'ganancia', 'prosperidad', 'abundancia', 'capital', 'billete', 'precio', 'compra', 'venta', 'deuda', 'préstamo', 'lotería', 'herencia', 'banco', 'millonario', 'pagar', 'cobrar', 'ganar'],
     
-    trabajo: ['trabajo', 'empleo', 'profesión', 'carrera', 'laboral', 'jefe', 'ascenso', 'negocio', 'empresa', 'oficina', 'proyecto', 'ocupación', 'puesto', 'sueldo', 'profesional', 'curriculum', 'entrevista', 'compañeros', 'despido', 'contrato', 'habilidades', 'experiencia'],
+    trabajo: ['trabajo', 'empleo', 'profesión', 'carrera', 'laboral', 'jefe', 'ascenso', 'empresa', 'oficina', 'proyecto', 'ocupación', 'puesto', 'sueldo', 'profesional', 'curriculum', 'entrevista', 'compañeros', 'despido', 'contrato', 'habilidades', 'experiencia'],
     
-    futuro: ['dejará','preparar','anticipar','planear','proyectar','planear','intentaré','correré','volaré','lograré','futuro', 'destino', 'porvenir', 'mañana', 'camino', 'rumbo', 'suerte', 'vida', 'plan', 'adelante', 'próximo', 'después', 'predecir', 'adivinar', 'anticipar', 'años', 'tiempo', 'pronóstico', 'vaticinio', 'presagio', 'profecía', 'augurio'],
+    futuro: ['dejará', 'preparar', 'anticipar', 'planear', 'proyectar', 'intentaré', 'correré', 'volaré', 'lograré', 'futuro', 'destino', 'porvenir', 'mañana', 'camino', 'rumbo', 'suerte', 'vida', 'plan', 'adelante', 'próximo', 'después', 'predecir', 'adivinar', 'años', 'tiempo', 'pronóstico', 'vaticinio', 'presagio', 'profecía', 'augurio'],
     
-    muerte: ['destruira','destruir','nostradamus','acabará','mundo','muerte', 'morir', 'fallecimiento', 'funeral', 'más allá', 'fin', 'descanso eterno', 'tumba', 'luto', 'pérdida', 'duelo', 'trascender', 'final', 'despedida', 'cementerio', 'alma', 'espíritu', 'vida eterna', 'fantasma', 'reencarnación','cometa', 'asteroide', 'meteoro', 'apocalipsis', 'fin del mundo',
-             'cataclismo', 'destrucción total', 'impacto', 'colisión', 'extinción', 'desastre', 'catástrofe', 'calamidad', 'devastación', 'aniquilación', 'desolación', 'ruinas', 'cenizas'],
+    muerte: ['tumbas','muertos','muerto','destruira', 'destruir', 'nostradamus', 'acabará', 'mundo', 'muerte', 'morir', 'fallecimiento', 'funeral', 'más allá', 'fin', 'descanso eterno', 'tumba','tumbas', 'luto', 'pérdida', 'duelo', 'trascender', 'final', 'despedida', 'cementerio', 'alma', 'espíritu', 'vida eterna', 'fantasma', 'reencarnación', 'cometa', 'asteroide', 'meteoro', 'apocalipsis', 'cataclismo', 'impacto', 'colisión', 'extinción', 'desastre', 'catástrofe', 'calamidad', 'devastación', 'aniquilación', 'desolación', 'ruinas', 'cenizas', 'entierro'],
 
-    viajes: ['viaje', 'mudanza', 'país', 'extranjero', 'aventura', 'destino', 'turismo', 'vacaciones', 'explorar', 'camino', 'recorrido', 'mapa', 'traslado', 'visitar', 'lejos', 'cerca', 'frontera', 'pasaporte', 'maleta', 'hotel', 'vuelo', 'avión', 'tren', 'viajar', 'conocer', 'descubrir'],
+    viajes: ['corren','vuelan','viaje', 'mudanza', 'país', 'extranjero', 'aventura', 'destino', 'turismo', 'vacaciones', 'explorar', 'camino', 'recorrido', 'mapa', 'traslado', 'visitar', 'lejos', 'cerca', 'frontera', 'pasaporte', 'maleta', 'hotel', 'vuelo', 'avión', 'tren', 'viajar', 'conocer', 'descubrir'],
     
-    familia: ['familia', 'hijo', 'hija', 'padre', 'madre', 'hermano', 'hermana', 'pariente', 'hogar', 'casa', 'adopción', 'embarazo', 'padres', 'abuelos', 'nietos', 'herencia familiar', 'apellido', 'tradición', 'linaje', 'descendencia', 'familiar', 'consanguíneo', 'matrimonio', 'parentesco'],
+    familia: ['familia', 'hijo', 'hija', 'padre', 'madre', 'hermano', 'hermana', 'pariente', 'hogar', 'casa', 'adopción', 'embarazo', 'padres', 'abuelos', 'nietos', 'herencia familiar', 'apellido', 'tradición', 'linaje', 'descendencia', 'familiar', 'consanguíneo', 'parentesco'],
     
-    educacion: ['estudio', 'universidad', 'semestre', 'carrera', 'escuela', 'aprender', 'título', 'examen', 'aprobar', 'maestro', 'alumno', 'conocimiento', 'sabiduría', 'curso', 'materia', 'academia', 'graduación', 'tesis', 'máster', 'doctorado', 'beca', 'libro', 'lección', 'enseñanza', 'aprendizaje', 'educación', 'estudiar'],
-    
-    decisiones: ['decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'escoger', 'elegir', 'indecisión', 'consecuencia', 'encrucijada', 'resolver', 'determinar', 'preferir', 'seleccionar', 'incertidumbre', 'crisis', 'decisión', 'definir', 'deliberar', 'evaluar', 'considerar', 'valorar']
+    decisiones: ['decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'escoger', 'elegir', 'indecisión', 'consecuencia', 'encrucijada', 'resolver', 'determinar', 'preferir', 'seleccionar', 'incertidumbre', 'crisis', 'decisión', 'definir', 'deliberar', 'evaluar', 'considerar', 'valorar'],
+
+    educacion: ['estudio', 'universidad', 'semestre', 'carrera', 'escuela', 'aprender', 'título', 'examen', 'aprobar', 'maestro', 'alumno', 'conocimiento', 'sabiduría', 'curso', 'materia', 'academia', 'graduación', 'tesis', 'máster', 'doctorado', 'beca', 'libro', 'lección', 'enseñanza', 'aprendizaje', 'educación', 'estudiar']
   };
   
   /**
@@ -195,368 +208,199 @@ const categories = {
    * @param {Array} arr - Array del que se seleccionará un elemento
    * @return {*} - Elemento aleatorio del array
    */
-  function getRandomElement(arr) { 
-    return arr[Math.floor(Math.random() * arr.length)]; 
+  function getRandomElement(arr) {
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.error("Array inválido o vacío en getRandomElement");
+        return "";
+    }
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function normalizeText(text) {
+    if (typeof text !== 'string') return '';
+    return text.toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[¿?¡!.,;:]/g, '');
+}
+
+// ====================== CORE DEL PREDICTOR ======================
+function detectCategory(question) {
+  if (!question || typeof question !== 'string' || question.trim() === '') {
+      return "ambigua";
   }
   
-  /**
-   * Detector de categoría según palabras clave en la pregunta
-   * @param {string} question - La pregunta del usuario
-   * @return {string} - La categoría detectada
-   */
-// Mejora del detector de categorías
-function detectCategory(question) {
-    if (!question || question.trim() === '') return "ambigua";
-    
-    const normalized = question.toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Elimina acentos
-        .replace(/[¿?¡!.,;:]/g, '');
+  const normalized = normalizeText(question);
+  const scores = {};
 
-        const apocalypticWords = ['cometa', 'asteroide', 'fin del mundo', 'destruir', 'apocalipsis'];
-        const hasApocalyptic = apocalypticWords.some(word => normalized.includes(word));
-        
-        if (hasApocalyptic) {
-            return "muerte"; // Fuerza esta categoría para preguntas apocalípticas
-        }
+  // Calcular puntajes por categoría
+  for (const [category, keywords] of Object.entries(enhancedKeywords)) {
+      scores[category] = keywords.reduce((acc, keyword) => {
+          const regex = new RegExp(`\\b${keyword}\\b`, 'i');
+          const match = normalized.match(regex);
+          
+          if (match) {
+              let score = 2; // Puntaje base
+              // Bonus por posición (inicio/final de la pregunta)
+              if (match.index < 3 || match.index > normalized.length - keyword.length - 3) {
+                  score += 1;
+              }
+              return acc + score;
+          }
+          return acc;
+      }, 0);
+  }
 
-    // Palabras clave mejoradas con sinónimos
-    const enhancedKeywords = {
-        amor: ['amor', 'enamorar', 'pareja', 'novio', 'novia', 'esposo','esposa', 'matrimonio', 'boda', 'romance', 'relación', 'sentimientos'],
-        trabajo: ['trabajo', 'empleo', 'jefe', 'contrato', 'sueldo', 'oficina', 'profesión', 'carrera', 'entrevista', 'trabajar'],
-        dinero: ['dinero', 'finanzas', 'banco', 'pago', 'deuda', 'ahorro', 'inversión', 'rico', 'pobre', 'comprar', 'vender'],
-        salud: ['salud', 'enfermo', 'doctor', 'hospital', 'dolor', 'cuerpo', 'mente', 'medicina', 'curar', 'enfermedad'],
-        futuro: ['futuro', 'destino', 'mañana', 'proximo', 'año', 'mes', 'semana', 'tiempo', 'venir', 'después'],
-        educacion: ['estudiar', 'examen', 'universidad', 'escuela', 'profesor', 'aprender', 'clase', 'materia', 'nota', 'curso'],
-        viajes: ['visita', 'visitarnos','visitaran','viajar', 'vacaciones', 'destino', 'aeropuerto', 'tren', 'bus', 'hotel', 'maleta', 'pasaporte', 'turismo', 'viajare'],
-        familia: ['familia', 'padre', 'madre', 'hermano', 'hermana', 'hijo', 'hija', 'abuelo', 'abuela', 'pariente', 'hogar', 'tio', 'tia'],
-        decisiones: ['decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'resolver', 'elegir', 'indecisión']
-    };
-
-    // Ponderación por categoría
-    const scores = {};
-    for (const [category, keywords] of Object.entries(enhancedKeywords)) {
-        scores[category] = keywords.reduce((acc, keyword) => {
-            const regex = new RegExp(`\\b${keyword}\\b`, 'i');
-            return acc + (normalized.match(regex) ? keyword.length : 0);
-        }, 0);
-    }
-
-    // Determinar categoría dominante
-    let maxCategory = "ambigua";
-    let maxScore = 0;
-    
-    for (const [category, score] of Object.entries(scores)) {
-        if (score > maxScore) {
-            maxScore = score;
-            maxCategory = category;
-        }
-    }
-
-    return maxScore >= 3 ? maxCategory : "ambigua";
-}
+  // Determinar categoría dominante
+  let maxCategory = "ambigua";
+  let maxScore = 0;
   
-  /**
-   * Generador de predicciones mejorado
-   * @param {string} category - Categoría de la predicción
-   * @param {Object} options - Opciones adicionales
-   * @return {string} - La predicción generada
-   */
-  function generatePrediction(category, options = {}) {
-    // Configuración por defecto
+  for (const [category, score] of Object.entries(scores)) {
+      if (score > maxScore) {
+          maxScore = score;
+          maxCategory = category;
+      }
+  }
+
+  // Threshold dinámico según longitud de la pregunta
+  const wordCount = normalized.split(/\s+/).filter(w => w.length > 0).length;
+  const threshold = wordCount <= 4 ? 2 : 3;
+
+  const finalCategory = maxScore >= threshold ? maxCategory : "ambigua";
+
+  // Añadir aquí el console.log
+  console.log(`Categoría detectada: ${finalCategory}, Puntajes:`, scores);
+
+  return finalCategory;
+}
+function generatePrediction(category, options = {}) {
     const config = {
-      specialPhraseChance: 0.02,   // 2% de probabilidad para frases especiales
-      combinedPhraseChance: 0.5,   // 50% de probabilidad para frases combinadas
-      mysticalLevel: 1,            // Nivel de misticismo (1-3)
-      currentMoonPhase: null,      // Fase lunar actual (opcional)
-      currentDate: new Date()      // Fecha actual
+        specialPhraseChance: 0.1,
+        combinedPhraseChance: 0.3,
+        mysticalLevel: 2,
+        currentMoonPhase: null,
+        currentDate: new Date(),
+        ...options
     };
-    
-    // Combinar con opciones personalizadas
-    Object.assign(config, options);
-    
-    // Ajustar la probabilidad de frase especial según la fase lunar si está disponible
-    if (config.currentMoonPhase === "luna nueva" || config.currentMoonPhase === "luna llena") {
-      config.specialPhraseChance += 0.01; // 1% adicional en lunas especiales
-    }
-    
+
     // Frase especial con probabilidad configurable
     if (Math.random() < config.specialPhraseChance) {
-      return getRandomElement(specialPhrases);
+        return getRandomElement(specialPhrases);
     }
-  
-    // Obtener frases según categoría (o ambigua si no existe)
+
+    // Obtener frase base según categoría
     const categoryPhrases = categories[category] || categories.ambigua;
-    const selectedPhrase = getRandomElement(categoryPhrases);
-    
-    // Determinar si añadir una frase ambigua complementaria
+    let prediction = getRandomElement(categoryPhrases);
+
+    // Posible frase ambigua complementaria
     if (Math.random() < config.combinedPhraseChance) {
-      const ambiguousPhrase = getRandomElement(categories.ambigua);
-      return `${selectedPhrase} ${ambiguousPhrase}`;
+        prediction += " " + getRandomElement(categories.ambigua);
     }
-    
-    // Añadir elementos místicos según nivel configurado
-    let prediction = selectedPhrase;
-    
-    if (config.mysticalLevel >= 2) {
-      if (Math.random() < 0.3) {
+
+    // Elementos místicos según nivel
+    if (config.mysticalLevel >= 2 && Math.random() < 0.3) {
         prediction += " " + getRandomElement(mysticalElements.standard);
-      }
     }
     
-    if (config.mysticalLevel >= 3) {
-      if (Math.random() < 0.2) {
+    if (config.mysticalLevel >= 3 && Math.random() < 0.2) {
         prediction += " " + getRandomElement(mysticalElements.cosmic);
-      }
     }
-    
+
     return prediction;
-  }
-  
-  /**
-   * Procesador principal de preguntas
-   * @param {string} question - La pregunta del usuario
-   * @param {Object} options - Opciones de configuración
-   * @return {Object} - Resultado con predicción y metadatos
-   */
-  function processPrediction(question, options = {}) {
-    // Detectar categoría automáticamente
+}
+
+function processPrediction(question, options = {}) {
     const detectedCategory = detectCategory(question);
-    
-    // Si se proporciona una categoría explícita, usar esa en su lugar
     const category = options.category || detectedCategory;
     
-    // Generar la predicción con las opciones proporcionadas
-    const prediction = generatePrediction(category, options);
-    
-    // Retornar resultado completo con metadatos útiles
     return {
-      question,
-      prediction,
-      category,
-      detectedCategory,
-      timestamp: new Date().toISOString(),
-      mysticalLevel: options.mysticalLevel || 1,
-      moonPhase: options.currentMoonPhase || "desconocida"
+        question,
+        prediction: generatePrediction(category, options),
+        category,
+        detectedCategory,
+        timestamp: new Date().toISOString(),
+        mysticalLevel: options.mysticalLevel || 1,
+        moonPhase: options.currentMoonPhase || "desconocida"
     };
-  }
-  
-  /**
-   * Función para serializar y guardar el historial de predicciones
-   * @param {Array} history - Array de predicciones previas
-   * @param {string} storageKey - Clave para almacenamiento local
-   * @return {boolean} - Éxito de la operación
-   */
-  function saveHistory(history, storageKey = "predictor_history") {
-    try {
-      // Limitar el historial a las últimas 50 predicciones
-      const limitedHistory = history.slice(-50);
-      
-      // Si estamos en un entorno con localStorage (navegador)
-      if (typeof localStorage !== 'undefined') {
-        localStorage.setItem(storageKey, JSON.stringify(limitedHistory));
-        return true;
-      }
-      
-      // Si estamos en un entorno con FileSystem (Node.js)
-      if (typeof require === 'function') {
-        try {
-          const fs = require('fs');
-          fs.writeFileSync(`${storageKey}.json`, JSON.stringify(limitedHistory, null, 2));
-          return true;
-        } catch (fsError) {
-          console.error("Error al guardar en archivo:", fsError);
-          return false;
-        }
-      }
-      
-      return false;
-    } catch (error) {
-      console.error("Error al guardar historial:", error);
-      return false;
-    }
-  }
-  
-  /**
-   * Función para cargar el historial de predicciones
-   * @param {string} storageKey - Clave para almacenamiento local
-   * @return {Array} - Historial de predicciones o array vacío
-   */
-  function loadHistory(storageKey = "predictor_history") {
-    try {
-      // Si estamos en un entorno con localStorage (navegador)
-      if (typeof localStorage !== 'undefined') {
-        const saved = localStorage.getItem(storageKey);
-        return saved ? JSON.parse(saved) : [];
-      }
-      
-      // Si estamos en un entorno con FileSystem (Node.js)
-      if (typeof require === 'function') {
-        try {
-          const fs = require('fs');
-          if (fs.existsSync(`${storageKey}.json`)) {
-            const data = fs.readFileSync(`${storageKey}.json`, 'utf8');
-            return JSON.parse(data);
-          }
-        } catch (fsError) {
-          console.error("Error al cargar desde archivo:", fsError);
-        }
-      }
-      
-      return [];
-    } catch (error) {
-      console.error("Error al cargar historial:", error);
-      return [];
-    }
-  }
-  
-  /**
-   * Analizador avanzado de la pregunta para mejorar la detección
-   * @param {string} question - Pregunta del usuario
-   * @return {Object} - Análisis de sentimiento y temas
-   */
-  function analyzeQuestion(question) {
-    // Normalizar el texto
-    const text = question.toLowerCase();
+}
+
+// ====================== FUNCIONES AVANZADAS ======================
+function analyzeQuestion(question) {
+    const text = normalizeText(question);
     
-    // Análisis simple de sentimiento
+    // Análisis de sentimiento
     const sentimentWords = {
-      positive: ['bien', 'bueno', 'excelente', 'feliz', 'alegre', 'éxito', 'ganar', 'positivo', 'favorable', 'mejor'],
-      negative: ['mal', 'malo', 'terrible', 'triste', 'fracaso', 'perder', 'negativo', 'desfavorable', 'peor', 'miedo'],
-      neutral: ['será', 'es', 'pasará', 'ocurrirá', 'sucederá', 'cuando', 'cómo', 'dónde', 'por qué']
+        positive: ['bien', 'bueno', 'excelente', 'feliz', 'alegre', 'éxito', 'ganar'],
+        negative: ['mal', 'malo', 'terrible', 'triste', 'fracaso', 'perder', 'negativo'],
+        neutral: ['será', 'es', 'pasará', 'ocurrirá', 'sucederá', 'cuando', 'cómo']
     };
-    
-    // Contar palabras por sentimiento
+
     const sentimentCounts = { positive: 0, negative: 0, neutral: 0 };
     
     for (const [sentiment, words] of Object.entries(sentimentWords)) {
-      for (const word of words) {
-        const regex = new RegExp(`\\b${word}\\b`, 'i');
-        if (regex.test(text)) {
-          sentimentCounts[sentiment]++;
-        }
-      }
+        sentimentCounts[sentiment] = words.reduce((count, word) => {
+            return count + (new RegExp(`\\b${word}\\b`, 'i').test(text) ? 1 : 0);
+        }, 0);
     }
-    
+
     // Determinar sentimiento predominante
     let predominantSentiment = 'neutral';
-    if (sentimentCounts.positive > sentimentCounts.negative && 
-        sentimentCounts.positive > sentimentCounts.neutral) {
-      predominantSentiment = 'positive';
-    } else if (sentimentCounts.negative > sentimentCounts.positive && 
-               sentimentCounts.negative > sentimentCounts.neutral) {
-      predominantSentiment = 'negative';
+    if (sentimentCounts.positive > sentimentCounts.negative && sentimentCounts.positive > sentimentCounts.neutral) {
+        predominantSentiment = 'positive';
+    } else if (sentimentCounts.negative > sentimentCounts.positive && sentimentCounts.negative > sentimentCounts.neutral) {
+        predominantSentiment = 'negative';
     }
-    
-    // Detectar si es pregunta temporal
-    const isTemporalQuestion = /\bcuándo\b|\bfecha\b|\btiempo\b|\bdía\b|\bmes\b|\baño\b/i.test(text);
-    
-    // Detectar si es pregunta de sí/no
-    const isYesNoQuestion = /\b(seré|será|tendré|tendrá|puedo|puede|debo|debe|voy|va|es|son|están)\b/i.test(text);
-    
+
     return {
-      sentiment: predominantSentiment,
-      isTemporal: isTemporalQuestion,
-      isYesNo: isYesNoQuestion,
-      wordCount: text.split(/\s+/).length,
-      characters: text.length
+        sentiment: predominantSentiment,
+        isTemporal: /\b(cuándo|fecha|tiempo|día|mes|año)\b/i.test(text),
+        isYesNo: /\b(seré|será|tendré|tendrá|puedo|puede|debo|debe)\b/i.test(text),
+        wordCount: text.split(/\s+/).filter(w => w.length > 0).length,
+        characters: text.length
     };
-  }
-  
-  /**
-   * Versión avanzada del predictor con más funcionalidad
-   * @param {string} question - Pregunta del usuario
-   * @param {Object} options - Opciones de configuración
-   * @return {Object} - Resultado detallado
-   */
-  // Función principal refactorizada
+}
+
 function advancedPredictor(question, userOptions = {}) {
-    // Validación inicial de parámetros
+    // Validación
     if (typeof question !== 'string' || question.trim() === '') {
         throw new Error('La pregunta debe ser un texto válido');
     }
 
-    // Análisis de la pregunta
     const analysis = analyzeQuestion(question);
-    const detectedCategory = detectCategory(question);
-    const category = userOptions.category || detectedCategory;
-
-    // Configuración con valores por defecto
-    const defaultOptions = {
+    const options = {
         mysticalLevel: 1,
         specialPhraseChance: 0.02,
         combinedPhraseChance: 0.5,
-        yesNoResponse: []
+        yesNoResponse: [],
+        ...userOptions
     };
 
-    // Fusionar opciones del usuario con las predeterminadas
-    const options = { ...defaultOptions, ...userOptions };
-
-    // Ajustar nivel místico basado en análisis
-    const mysticalLevel = adjustMysticalLevel(analysis, options.mysticalLevel);
+    // Ajustar nivel místico
+    let mysticalLevel = options.mysticalLevel;
+    if (analysis.wordCount > 15) mysticalLevel = Math.min(mysticalLevel + 1, 3);
+    if (analysis.sentiment === 'negative') mysticalLevel = Math.max(mysticalLevel - 1, 1);
 
     // Manejo de respuestas Sí/No
     if (analysis.isYesNo) {
-        options.yesNoResponse = generateYesNoResponse(analysis);
+        const yesProbability = { positive: 0.7, neutral: 0.5, negative: 0.3 }[analysis.sentiment] || 0.5;
+        options.yesNoResponse = Math.random() < yesProbability ? [
+            "Los signos apuntan a que sí",
+            "Las energías se alinean favorablemente"
+        ] : [
+            "Los augurios sugieren cautela",
+            "El cosmos muestra resistencia"
+        ];
     }
 
-    // Procesar predicción principal
+    // Procesar y retornar resultado
     const result = processPrediction(question, { 
-        ...options, 
-        mysticalLevel, 
-        category 
+        ...options,
+        mysticalLevel
     });
 
-    // Enriquecer resultado
-    return enrichPredictionResult(result, analysis, options);
-}
-
-// Funciones auxiliares refactorizadas
-function adjustMysticalLevel(analysis, baseLevel) {
-    let level = baseLevel;
-    if (analysis.wordCount > 15) level = Math.min(level + 1, 3);
-    if (analysis.sentiment === 'negative') level = Math.max(level - 1, 1);
-    return level;
-}
-
-function generateYesNoResponse(analysis) {
-    const yesProbability = calculateYesProbability(analysis.sentiment);
-    const isYes = Math.random() < yesProbability;
-    
-    return isYes ? [
-        "Los signos apuntan a que sí",
-        "Las energías se alinean favorablemente",
-        "El destino susurra una afirmación"
-    ] : [
-        "Los augurios sugieren cautela",
-        "El cosmos muestra resistencia",
-        "Las estrellas aconsejan buscar alternativas"
-    ];
-}
-
-function calculateYesProbability(sentiment) {
-    const probabilities = {
-        positive: 0.7,
-        neutral: 0.5,
-        negative: 0.3
-    };
-    return probabilities[sentiment] || 0.5;
-}
-
-function enrichPredictionResult(result, analysis, options) {
-    // Agregar metadatos de análisis
-    result.analysis = analysis;
-    result.timestamp = new Date().toISOString();
-
-    // Construir respuesta final
+    // Enriquecer respuesta final
     let finalPrediction = result.prediction;
-
-    if (options.temporalReference) {
-        finalPrediction = `${finalPrediction} ${options.temporalReference}.`;
-    }
-
     if (options.yesNoResponse?.length > 0) {
-        const yesNoPhrase = getRandomElement(options.yesNoResponse);
-        finalPrediction = `${yesNoPhrase}. ${finalPrediction}`;
+        finalPrediction = `${getRandomElement(options.yesNoResponse)}. ${finalPrediction}`;
     }
 
     return {
@@ -566,10 +410,34 @@ function enrichPredictionResult(result, analysis, options) {
     };
 }
 
-// Exportación (si es módulo)
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        advancedPredictor,
-        // ... otras exportaciones
+// ====================== EXPORTACIÓN ======================
+if (typeof window !== 'undefined') {
+    window.advancedPredictor = advancedPredictor;
+    window.consultar = function() {
+        const pregunta = document.getElementById('pregunta')?.value;
+        if (!pregunta?.trim()) {
+            alert('Por favor, escribe una pregunta');
+            return;
+        }
+        
+        try {
+            const respuesta = advancedPredictor(pregunta);
+            const resultadoDiv = document.getElementById('resultado');
+            
+            if (resultadoDiv) {
+                resultadoDiv.innerHTML = '';
+                mostrarRespuestaAcuosaFluida(respuesta.prediction, resultadoDiv);
+                
+                // Reproducir sonidos
+                ['susurros.wav', 'godpower.wav'].forEach(sound => {
+                    new Audio(`./sound/${sound}`)
+                        .play()
+                        .catch(e => console.error(`Error al reproducir ${sound}:`, e));
+                });
+            }
+        } catch (error) {
+            console.error("Error en consultar:", error);
+            alert("Ocurrió un error al consultar al oráculo");
+        }
     };
 }
