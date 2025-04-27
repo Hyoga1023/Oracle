@@ -250,7 +250,7 @@ const categories = {
     
     arte_creatividad: ['arte', 'creatividad', 'pintura', 'música', 'danza', 'literatura', 'escultura', 'dibujo', 'cine', 'fotografía', 'poema', 'inspiración', 'expresión', 'diseño', 'estética', 'imaginación', 'galería', 'artesano', 'talento', 'cultura'],
     
-    deporte: ['deporte', 'fútbol', 'baloncesto', 'correr', 'entrenamiento', 'ejercicio', 'equipo', 'competencia', 'salud física', 'atletismo', 'partido', 'juego', 'gimnasio', 'natación', 'ciclismo', 'victoria', 'derrota', 'energía', 'rendimiento', 'yoga', 'lucha'],
+    deporte: ['Colombia','mundial','eliminatorias','selección','deporte', 'fútbol', 'baloncesto', 'correr', 'entrenamiento', 'ejercicio', 'equipo', 'competencia', 'salud física', 'atletismo', 'partido', 'juego', 'gimnasio', 'natación', 'ciclismo', 'victoria', 'derrota', 'energía', 'rendimiento', 'yoga', 'lucha'],
     
     naturaleza: ['naturaleza', 'medio ambiente', 'planeta', 'tierra', 'árboles', 'flores', 'animales', 'ecosistema', 'clima', 'biodiversidad', 'reciclaje', 'sostenibilidad', 'contaminación', 'aire', 'agua', 'fuego', 'conservación', 'recursos', 'vida salvaje', 'bosque', 'selva', 'desierto'],
     
