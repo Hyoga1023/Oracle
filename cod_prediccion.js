@@ -159,8 +159,8 @@ const categories = {
         "La pasión por el deporte es lo que convierte un simple juego en una experiencia trascendental."
     ],
     decisiones: [
-        "El camino que elijas definirá tu destino",
-        "Ante la duda, escucha a tu corazón pero no ignores tu razón",
+        "El camino que se elija definirá el destino",
+        "Ante la duda, se debe escuchar al corazón pero no ignorar la razón",
         "Cada decisión abre unas puertas y cierra otras",
         "La sabiduría está en sopesar las consecuencias",
         "A veces no elegir también es una decisión",
@@ -168,7 +168,35 @@ const categories = {
         "El futuro es incierto, pero cada elección lo moldea",
         "Las decisiones son espejos que reflejan nuestras prioridades y valores",
         "Cada elección es un paso hacia lo desconocido, pero también hacia el crecimiento",
+        "Tener cuidado con lo que se elige es fundamental, ya que puede cambiar el rumbo de la vida",
     ],  
+    naturaleza: [
+        "La naturaleza es un espejo que refleja nuestro interior",
+        "La tierra habla en susurros, pero pocos saben escuchar",
+        "Cada hoja caída es un recordatorio de la impermanencia",
+    ],
+    sueños: [
+        "Los sueños son el eco de lo que anhelas en lo profundo de tu ser",
+        "Cada sueño es una estrella que ilumina el camino hacia tu destino",
+        "Los sueños son la brújula que guía tu viaje por la vida",
+        "La realización de un sueño comienza con el primer paso",
+        "Los sueños son semillas que florecen con dedicación y esfuerzo",
+        "Cada sueño es un reflejo de tus deseos más profundos",
+        "Los sueños son el lenguaje del alma, hablando en susurros y visiones",
+        "La magia de los sueños reside en su capacidad para inspirar y transformar"
+    ],
+    misterio: [ 
+        "El dia de la revelación está cerca, pero no es hoy.",
+        "Las sombras del misterio se ciernen sobre la verdad oculta.",
+        "Seres sobrenaturales inevitablemente vendran y descubrirán la verdad.",
+        "El velo entre los mundos se espesa, algo se acerca.",
+        "espiritus y sombras danzan en la penumbra de lo desconocido.",
+        "una sombra se cierne sobre el horizonte, pero no es el momento de revelarse.",
+        "En rincones poco comunes, la verdad se oculta tras un velo que el ojo común no ve.",
+        "desde la oscuridad una entidad nos indica que aún no es el momento de revelar la verdad.",
+        "El universo guarda misterios que desafían la comprensión humana.",
+        "ojos brillantes en la oscuridad observan cada movimiento."
+    ],    
     ambigua: [
         "Los astros no están alineados claramente",
         "El universo guarda silencio por ahora",
@@ -177,7 +205,8 @@ const categories = {
         "Las sombras del futuro son confusas",
         "Las cartas están en la mesa, pero el juego aún no ha comenzado",
         "El oráculo no tiene una respuesta clara en este momento",
-        "Las estrellas titilan, pero no revelan su secreto"
+        "Las estrellas titilan, pero no revelan su secreto",
+        "El tiempo es un río que fluye, y los peces nadan en direcciones inciertas"
     ]            
   };
   
@@ -193,7 +222,7 @@ const categories = {
     
     salud: ['salud', 'enfermedad', 'dolor', 'sanar', 'médico', 'hospital', 'bienestar', 'dolencia', 'recuperación', 'cuerpo', 'medicina', 'tratamiento', 'síntoma', 'malestar', 'saludable', 'virus', 'físico', 'mental', 'curar', 'enfermo', 'sanaré', 'mejoraré'],
     
-    dinero: ['baloto', 'dinero', 'riqueza', 'fortuna', 'finanzas', 'económico', 'inversión', 'negocio', 'ahorro', 'ganancia', 'prosperidad', 'abundancia', 'capital', 'billete', 'precio', 'compra', 'venta','venderé', 'deuda', 'préstamo', 'lotería', 'herencia', 'banco', 'millonario', 'pagar', 'cobrar', 'ganar', 'invertiré', 'compraré', 'ahorraré'],
+    dinero: ['baloto', 'dinero', 'riqueza', 'fortuna', 'finanzas', 'económico', 'inversión', 'negocio', 'ahorro', 'ganancia', 'prosperidad', 'abundancia', 'capital', 'billete', 'precio', 'compra', 'venta','venderé', 'deuda', 'préstamo', 'lotería', 'herencia', 'banco', 'millonario', 'pagar', 'cobrar', 'ganar', 'invertiré', 'compraré', 'ahorraré', 'chance'],
     
     trabajo: ['trabajo', 'empleo', 'profesión', 'carrera', 'laboral', 'jefe', 'ascenso', 'empresa', 'oficina', 'proyecto', 'ocupación', 'puesto', 'sueldo', 'profesional', 'curriculum', 'entrevista', 'compañeros', 'despido', 'contrato', 'habilidades', 'experiencia', 'trabajaré', 'ascenderé', 'contrataré'],
     
@@ -205,7 +234,7 @@ const categories = {
     
     familia: ['familia', 'hijo', 'hija', 'padre', 'madre', 'hermano', 'hermana', 'pariente', 'hogar', 'casa', 'adopción', 'embarazo', 'padres', 'abuelos', 'nietos', 'herencia familiar', 'apellido', 'tradición', 'linaje', 'descendencia', 'familiar', 'consanguíneo', 'parentesco', 'cuidaré', 'amaré', 'protegeré'],
     
-    decisiones: ['consejos','acompañare','conocere','ganara','decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'escoger', 'elegir', 'indecisión', 'consecuencia', 'encrucijada', 'resolver', 'determinar', 'preferir', 'seleccionar', 'incertidumbre', 'crisis', 'decisión', 'definir', 'deliberar', 'evaluar', 'considerar', 'valorar', 'elegiré', 'decidiré', 'resolveré', 'deberia'],
+    decisiones: ['consejos','acompañare','conocere','decidir', 'elección', 'opción', 'camino', 'dilema', 'duda', 'alternativa', 'escoger', 'elegir', 'indecisión', 'consecuencia', 'encrucijada', 'resolver', 'determinar', 'preferir', 'seleccionar', 'incertidumbre', 'crisis', 'decisión', 'definir', 'deliberar', 'evaluar', 'considerar', 'valorar', 'elegiré', 'decidiré', 'resolveré', 'deberia'],
     
     educacion: ['titulo','estudiar','estudio', 'universidad', 'semestre', 'carrera', 'escuela', 'aprender', 'título', 'examen', 'aprobar', 'maestro', 'alumno', 'conocimiento', 'sabiduría', 'curso', 'materia', 'academia', 'graduación', 'tesis', 'máster', 'doctorado', 'beca', 'libro', 'lección', 'enseñanza', 'aprendizaje', 'educación', 'estudiar', 'aprenderé', 'aprobaré', 'graduaré'],
     
@@ -217,13 +246,13 @@ const categories = {
     
     arte_creatividad: ['arte', 'creatividad', 'pintura', 'música', 'danza', 'literatura', 'escultura', 'dibujo', 'cine', 'fotografía', 'poema', 'inspiración', 'expresión', 'diseño', 'estética', 'imaginación', 'galería', 'artesano', 'talento', 'cultura', 'crear', 'dibujaré', 'pintaré'],
     
-    deporte: ['partidos','mundial','eliminatorias','selección','deporte', 'fútbol', 'baloncesto', 'correr', 'entrenamiento', 'ejercicio', 'equipo', 'competencia', 'salud física', 'atletismo', 'partido', 'juego', 'gimnasio', 'natación', 'ciclismo', 'victoria', 'derrota', 'energía', 'rendimiento', 'yoga', 'lucha', 'correré', 'entrenaré', 'jugaré'],
+    deporte: ['perdera','ganara','partidos','mundial','eliminatorias','selección','deporte', 'fútbol', 'baloncesto', 'correr', 'entrenamiento', 'ejercicio', 'equipo', 'competencia', 'salud física', 'atletismo', 'partido', 'juego', 'gimnasio', 'natación', 'ciclismo', 'victoria', 'derrota', 'energía', 'rendimiento', 'yoga', 'lucha', 'correré', 'entrenaré', 'jugaré'],
     
     naturaleza: ['naturaleza', 'medio ambiente', 'planeta', 'tierra', 'árboles', 'flores', 'animales', 'ecosistema', 'clima', 'biodiversidad', 'reciclaje', 'sostenibilidad', 'contaminación', 'aire', 'agua', 'fuego', 'conservación', 'recursos', 'vida salvaje', 'bosque', 'selva', 'desierto', 'protegeré', 'preservaré'],
     
     sueños: ['sueños', 'metas', 'objetivos', 'aspiraciones', 'éxito', 'ambición', 'deseo', 'motivación', 'superación', 'logro', 'esperanza', 'ideal', 'proyecto', 'propósito', 'visión', 'empeño', 'determinación', 'alcanzar', 'sueño cumplido', 'alcanzaré', 'lograré'],
     
-    misterio: ['misterio', 'ovnis', 'extraterrestres', 'dimensiones', 'tiempo', 'espacio', 'fenómenos', 'paranormal', 'fantasmas', 'secretos', 'incógnitas', 'enigmas', 'conspiración', 'universo', 'agujero negro', 'multiverso', 'portal', 'desconocido', 'misticismo', 'descubriré', 'exploraré', 'investigaré']
+    misterio: ['depredadores','brujeria','entierro','asustar','asustara','susto','abducción','invadiran','misterio', 'ovnis', 'extraterrestres', 'dimensiones', 'tiempo', 'espacio', 'fenómenos', 'paranormal', 'fantasmas', 'secretos', 'incógnitas', 'enigmas', 'conspiración', 'universo', 'agujero negro', 'multiverso', 'portal', 'desconocido', 'misticismo', 'descubriré', 'exploraré', 'investigaré','alienigenas']
 };
   /**
    * Frases especiales que aparecen con baja probabilidad
@@ -301,9 +330,10 @@ const dominantKeywords = {
     dinero: ['dinero', 'riqueza', 'pagar', 'deuda', 'préstamo', 'inversión', 'lotería', 'ganar', 'ahorro'],
     futuro: ['conseguirá', 'logrará', 'obtendrá', 'será', 'tendrá', 'podrá', 'encontrará', 'descubrirá'],
     amor: ['amor', 'pareja', 'matrimonio', 'novio', 'novia', 'romance', 'enamorado', 'boda', 'divorcio'],
-    muerte: ['muerte', 'morir', 'fallecimiento', 'funeral', 'tumba', 'cementerio', 'apocalipsis', 'extinción'],
+    muerte: ['morira','muerte', 'morir', 'fallecimiento', 'funeral', 'tumba', 'cementerio', 'apocalipsis', 'extinción'],
     educacion: ['estudiar', 'universidad', 'carrera', 'examen', 'título', 'graduación', 'maestro', 'alumno'],
-    decisiones: ['decidir', 'elegir', 'escoger', 'duda', 'alternativa', 'preferir', 'debería', 'opción']
+    decisiones: ['decidir', 'elegir', 'escoger', 'duda', 'alternativa', 'preferir', 'debería', 'opción'],
+    misterio: ['brujeria','entierro','misterio', 'ovnis', 'extraterrestres', 'dimensiones', 'tiempo', 'espacio', 'fenómenos', 'paranormal', 'fantasmas', 'secretos', 'incógnitas', 'enigmas', 'conspiración', 'universo', 'agujero negro', 'multiverso', 'portal', 'desconocido', 'misticismo', 'descubriré', 'exploraré', 'investigaré']
 };
 
 function detectCategory(question) {
