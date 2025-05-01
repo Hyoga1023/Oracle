@@ -74,7 +74,7 @@ input {
   text-align: center;
   border-radius: 10px;
   background-color: var(--cuaternario-color);
-  color: var(--text-color1);
+  color: var(--primario-color);
 }
 .botones{
     display: flex;
