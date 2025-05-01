@@ -116,7 +116,7 @@ export function initOraculo() {
                 font-family: "Dancing Script", 'Times New Roman', serif;
                 font-size: 3rem;
                 line-height: 1.8;
-                color: #000000;
+                color:rgb(116, 116, 116);
                 width: 100%;
                 height: 100%;
                 position: relative;
@@ -147,8 +147,8 @@ export function initOraculo() {
                 display: inline-block;
                 opacity: 0;
                 transform: translateY(15px);
-                color: #000000;
-                text-shadow: 0 0 10px rgba(17, 12, 1, 0.7);
+                color: #e1c78f;
+                text-shadow: 0 0 10px rgba(14, 13, 13, 0.7);
                 animation: emerger-agua-fluido 1.2s forwards ease-out;
                 will-change: transform, opacity;
             }
