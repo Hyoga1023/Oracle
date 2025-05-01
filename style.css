@@ -73,7 +73,7 @@ input {
   border: none;
   text-align: center;
   border-radius: 10px;
-  background-color: var(--cuaternario-color);
+  background-color: var(--text-color1);
   color: var(--primario-color);
 }
 .botones{
